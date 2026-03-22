@@ -1,0 +1,170 @@
+
+/* 1. Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f2f2f2;
+}
+
+/* 2. Top Navbar */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c2efc9;
+  padding: 10px 30px;
+}
+
+/* 3. Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo-container img {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-container h1 {
+  font-size: 24px;
+  color: #1f6f3c;
+  margin-top: 6px;
+  font-weight: bolder;
+}
+
+/* 4. Top Login Button */
+.nav-top-btn .login-btn {
+  background-color: transparent;
+  color:#1f6f3c;
+  border: 1px solid #1f6f3c;
+  border-radius: 4px;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* 5. Bottom Navbar */
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3cc899;
+  padding: 10px 30px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* 6. Nav Links */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* 7. Navbar Buttons */
+.navbar-btn {
+  display: flex;
+  gap: 15px;
+}
+
+.join-btn,
+.learn-btn {
+  padding: 8px 20px;
+  background-color: #fff;
+  color: #2d765d;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 8. Header Section */
+.header {
+  background-image: linear-gradient(to bottom, #f6ec60, #1abc9c);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* 9. Intro Text */
+.intro {
+  text-align: center;
+  padding: 20px;
+  color: black;
+}
+
+/* 10. Sections Layout */
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sections > div {
+  width: 45%;
+  background-color: #9ef0a6;
+  padding: 20px;
+  border-radius: 10px;
+  border:6px solid #1f6f3c;
+}
+
+.sections img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 10px auto;
+}
+
+.section-btn {
+  background-color: #28e07e;
+  color: rgb(79, 57, 57);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* 11. Video Section */
+.Video-section iframe {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px 0;
+}
+
+/* 12. Footer */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* 13. Responsive Styles */
+@media (max-width: 768px) {
+  .sections > div {
+    width: 100%;
+  }
+
+  .navbar-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}
