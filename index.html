@@ -1,116 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mathlings</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Mathlings | Learn Math with Fun</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <body>
-    <!-- Top Nav -->
-    <nav class="navbar-top">
-      <div class="logo-container">
-        <img src="assets/images/mathlings-icon.png" alt="logo" />
-        <h1>Mathlings</h1>
-      </div>
-      <div class="nav-top-btn">
-        <button class="login-btn">Login</button>
-      </div>
-    </nav>
-
-    <!-- Bottom Nav -->
-    <div class="navbar-bottom">
-      <div class="nav-links">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Math Games</a></li>
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">Stories</a></li>
-        </ul>
-      </div>
-      <div class="navbar-btn">
-        <button class="join-btn">Join Us</button>
-        <button class="learn-btn">Learn More</button>
-      </div>
+  <nav class="navbar-top">
+    <div class="logo-container">
+      <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="logo-img" />
+      <h1>Mathlings</h1>
     </div>
-
-    <!-- Header -->
-    <div class="header">
-      <h1>Welcome To Our Website</h1>
-      <p>Put Slider Here</p>
+    <div class="nav-top-btn">
+      <button class="login-btn" id="loginBtn">Login</button>
     </div>
+  </nav>
 
-<!-- Intro -->
-<div class="main">
-  <div class="intro">
-    <h1>Welcome</h1>
-    <p>
-      Students Answer Adaptive Math Questions To Win Battles And Complete Quests.
-    </p>
-    <p>
-      Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
-    </p>
+  <div class="navbar-bottom">
+    <div class="nav-links">
+      <ul>
+        <li><a href="#" class="active-nav">Home</a></li>
+        <li><a href="#">Math Games</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Stories</a></li>
+      </ul>
+    </div>
+    <div class="navbar-btn">
+      <button class="join-btn" id="joinBtn">Join Us</button>
+      <button class="learn-btn" id="learnMoreBtn">Learn More</button>
+    </div>
   </div>
-</div>
-  
-      <!-- Card Sections -->
-      <div class="sections">
-        <div class="card">
-          <h2>Section 1</h2>
-          <p>Fun And Interactive Content For Kids.</p>
-          <img src="assets/images/mathlings-character-2.png" alt="" />
-          <button class="section-btn">Learn More</button>
-        </div>
 
-        <div class="card">
-          <h2>Section 2</h2>
-          <p>Build Strong Math Foundations.</p>
-          <img src="assets/images/mathlings-character-2.png" alt="" />
-          <button class="section-btn">Learn More</button>
-        </div>
-
-        <div class="card">
-          <h2>Section 3</h2>
-          <p>Build Strong Math Foundations.</p>
-          <img src="assets/images/mathlings-character-2.png" alt="" />
-          <button class="section-btn">Learn More</button>
-        </div>
-
-        <div class="card">
-          <h2>Section 4</h2>
-          <p>Build Strong Math Foundations.</p>
-          <img src="assets/images/mathlings-character-2.png" alt="" />
-          <button class="section-btn">Learn More</button>
-        </div>
-
-        <div class="card">
-          <h2>Section 5</h2>
-          <p>Build Strong Math Foundations.</p>
-          <img src="assets/images/mathlings-character-2.png" alt="" />
-          <button class="section-btn">Learn More</button>
-        </div>
-
-        <div class="card">
-          <h2>Section 6</h2>
-          <p>Build Strong Math Foundations.</p>
-          <img src="assets/images/mathlings-character-2.png" alt="" />
-          <button class="section-btn">Learn More</button>
-        </div>
-
-        <!-- Video Section -->
-        <div class="Video-section">
-          <h1>Learn With Videos</h1>
-          <p>Watch Fun And Interactive Math Videos Designed Just For Kids!</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/XPFSLhUHSX4?si=jzazEldoxAK2KIB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <section class="hero-section">
+    <div class="hero-blob"></div>
+    <div class="floating-circle circle-1"></div>
+    <div class="floating-circle circle-2"></div>
+    <div class="floating-circle circle-3"></div>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Math that feels like <span class="highlight">adventure</span></h1>
+        <p>Adaptive quests, cool battles & rewarding challenges — every step builds confidence.</p>
+        <div class="hero-buttons">
+          <button class="hero-start">Start Free</button>
+          <button class="hero-demo">See how it works</button>
         </div>
       </div>
+      <div class="hero-image">
+        <img src="assets/images/mathlings-character-2.png" alt="Kids learning math illustration" />
+      </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <div class="footer">
-      <p>&copy; 2025 Mathlings</p>
+  <div class="intro-wrapper">
+    <div class="intro-card">
+      <span class="intro-badge">🌟 adaptive learning</span>
+      <h2>Welcome to Mathlings</h2>
+      <p>Students answer adaptive math questions to win battles, complete quests, and unlock rewards. Every journey is personalized to make math joyful and effective.</p>
+      <div class="intro-stats">
+        <div><strong>500k+</strong><span>happy learners</span></div>
+        <div><strong>98%</strong><span>skill growth</span></div>
+        <div><strong>1,200+</strong><span>math challenges</span></div>
+      </div>
     </div>
-  </body>
+  </div>
+
+  <div class="cards-section">
+    <div class="section-title">
+      <h2>Explore & play</h2>
+      <p>Fun ways to master math fundamentals</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-img">
+          <img src="assets/images/mathlings-character-2.png" alt="Addition game" />
+        </div>
+        <h3>Number Ninjas</h3>
+        <p>Beat the clock with addition & subtraction challenges.</p>
+        <button class="card-btn">Play now →</button>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="assets/images/mathlings-character-2.png" alt="Multiplication" />
+        </div>
+        <h3>Multiplication Masters</h3>
+        <p>Fun puzzles that make times tables stick.</p>
+        <button class="card-btn">Play now →</button>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="assets/images/mathlings-character-2.png" alt="Fractions" />
+        </div>
+        <h3>Fraction Fables</h3>
+        <p>Visual stories that explain parts & wholes.</p>
+        <button class="card-btn">Play now →</button>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="assets/images/mathlings-character-2.png" alt="Geometry" />
+        </div>
+        <h3>Shape Explorers</h3>
+        <p>Discover geometry through interactive puzzles.</p>
+        <button class="card-btn">Play now →</button>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="assets/images/mathlings-character-2.png" alt="Money math" />
+        </div>
+        <h3>Coin & Cash Quest</h3>
+        <p>Real-world money skills & mental math.</p>
+        <button class="card-btn">Play now →</button>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="assets/images/mathlings-character-2.png" alt="Logic" />
+        </div>
+        <h3>Brain Builders</h3>
+        <p>Logic puzzles & critical thinking challenges.</p>
+        <button class="card-btn">Play now →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-wrapper">
+    <div class="video-container">
+      <div class="video-text">
+        <h2>Learn with fun videos</h2>
+        <p>Watch and learn — animated math lessons that kids love.</p>
+      </div>
+      <div class="video-responsive">
+        <iframe src="https://www.youtube.com/embed/XPFSLhUHSX4?si=jzazEldoxAK2KIB8" title="Math learning video for kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="footer-logo-img" />
+        <span>Mathlings</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Parents</a>
+        <a href="#">Support</a>
+      </div>
+      <p class="copyright">&copy; 2025 Mathlings — joyful math for every kid</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
