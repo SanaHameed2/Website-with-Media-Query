@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Mathlings | Learn Math with Fun</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.3/dist/dotlottie-wc.js" type="module"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -69,7 +70,6 @@
     </div>
   </div>
 
-  <!-- Scallop Divider 1 -->
   <div class="section-divider">
     <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
       <defs>
@@ -111,7 +111,7 @@
       </div>
       <div class="card">
         <div class="card-img">
-          <img src="assets/images/mathlings-character-2.png" alt="Fractions" />
+          <img src="assets/images/Fraction fable.png" alt="Fractions" />
         </div>
         <h3>Fraction Fables</h3>
         <p>Visual stories that explain parts & wholes.</p>
@@ -119,7 +119,7 @@
       </div>
       <div class="card">
         <div class="card-img">
-          <img src="assets/images/mathlings-character-2.png" alt="Geometry" />
+          <img src="assets/images/Shape Explorer Mascot.png" alt="Geometry" />
         </div>
         <h3>Shape Explorers</h3>
         <p>Discover geometry through interactive puzzles.</p>
@@ -127,7 +127,7 @@
       </div>
       <div class="card">
         <div class="card-img">
-          <img src="assets/images/mathlings-character-2.png" alt="Money math" />
+          <img src="assets/images/Shape Explorer Mascot.png" alt="Money math" />
         </div>
         <h3>Coin & Cash Quest</h3>
         <p>Real-world money skills & mental math.</p>
@@ -135,7 +135,7 @@
       </div>
       <div class="card">
         <div class="card-img">
-          <img src="assets/images/mathlings-character-2.png" alt="Logic" />
+          <img src="assets/images/Shape Explorer Mascot.png" alt="Logic" />
         </div>
         <h3>Brain Builders</h3>
         <p>Logic puzzles & critical thinking challenges.</p>
@@ -144,7 +144,6 @@
     </div>
   </div>
 
-  <!-- Scallop Divider 2 -->
   <div class="section-divider">
     <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
       <defs>
@@ -162,32 +161,52 @@
       <circle cx="1100" cy="37" r="8" fill="#facc15" fill-opacity="0.3"/>
     </svg>
   </div>
-    <!-- ========== EARTH DAY SECTION - LEFT TEXT + 3D ROTATING EARTH ========== -->
+
   <section class="earth-day-section">
     <div class="earth-day-container">
       <div class="earth-day-wrapper">
-        <!-- Left Side - Text Content -->
         <div class="earth-day-content">
           <div class="earth-day-badge">🌍 Every day is Earth Day</div>
-          <h2>Plant trees, make earth sustainabl <span class="earth-highlight">and more</span></h2>
-          <p>Join us in making a difference! Every small action counts toward a healthier planet. Plant a tree today.</p>
+          <h2>Plant trees, shop sustainably <span class="earth-highlight">and more</span></h2>
+          <p>Join us in making a difference! Every small action counts toward a healthier planet. Start your eco-friendly journey today.</p>
+          <button class="earth-day-btn">See collection →</button>
         </div>
         
-        <!-- Right Side - 3D Rotating Earth -->
-        <div class="earth-3d-container">
-          <div class="earth-3d">
-            <div class="earth-sphere">
-              <div class="earth-map"></div>
-            </div>
+        <div class="lottie-container">
+          <div class="lottie-gradient-wrapper">
+            <dotlottie-wc
+              src="https://lottie.host/ccecac13-19cb-4a02-8a3e-550bb81d8a65/0uZOebTWWe.lottie"
+              style="width: 280px; height: 280px"
+              autoplay
+              loop
+            ></dotlottie-wc>
           </div>
+          <div class="floating-leaves">
+            <span class="leaf">🍃</span>
+            <span class="leaf">🌿</span>
+            <span class="leaf">🍂</span>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- ========== END EARTH DAY SECTION ========== -->
 
-  <!-- Features Section -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="scallopGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#facc15" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#2563eb" stop-opacity="0.35"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,25 Q300,40 600,25 T1200,25 L1200,60 L0,60 Z" fill="url(#scallopGradient3)"/>
+      <circle cx="200" cy="33" r="8" fill="#facc15" fill-opacity="0.3"/>
+      <circle cx="500" cy="28" r="10" fill="#2563eb" fill-opacity="0.3"/>
+      <circle cx="800" cy="35" r="7" fill="#facc15" fill-opacity="0.3"/>
+      <circle cx="1000" cy="30" r="9" fill="#2563eb" fill-opacity="0.3"/>
+    </svg>
+  </div>
+
   <div class="features-section">
     <div class="section-title">
       <h2>Why kids love Mathlings</h2>
@@ -217,7 +236,6 @@
     </div>
   </div>
 
-  <!-- Scallop Divider 4 -->
   <div class="section-divider">
     <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
       <defs>
@@ -234,7 +252,6 @@
     </svg>
   </div>
 
-  <!-- Testimonials Section -->
   <div class="testimonials-section">
     <div class="section-title">
       <h2>Trusted by families</h2>
@@ -268,6 +285,21 @@
     </div>
   </div>
 
+  <div class="section-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="scallopGradient5" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#facc15" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#2563eb" stop-opacity="0.35"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,35 Q150,20 300,35 T600,35 T900,35 T1200,35 L1200,60 L0,60 Z" fill="url(#scallopGradient5)"/>
+      <circle cx="150" cy="28" r="9" fill="#facc15" fill-opacity="0.3"/>
+      <circle cx="450" cy="32" r="7" fill="#2563eb" fill-opacity="0.3"/>
+      <circle cx="750" cy="25" r="8" fill="#facc15" fill-opacity="0.3"/>
+      <circle cx="1050" cy="30" r="9" fill="#2563eb" fill-opacity="0.3"/>
+    </svg>
+  </div>
 
   <div class="video-wrapper">
     <div class="video-container">
@@ -297,6 +329,5 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
