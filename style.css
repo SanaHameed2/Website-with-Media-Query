@@ -152,6 +152,17 @@ body {
   z-index: 0;
 }
 
+/* Hero Section Video - Reduced Size */
+.hero-image video,
+.hero-image img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 28px;
+  animation: bounceSoft 3s ease-in-out infinite;
+}
+
 .floating-circle {
   position: absolute;
   border-radius: 50%;
@@ -1051,6 +1062,19 @@ body {
   }
 }
 
+/* Mobile - even smaller */
+@media (max-width: 768px) {
+  .hero-image video {
+    max-width: 85%;
+  }
+}
+
+/* Tablet - medium size */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-image video {
+    max-width: 75%;
+  }
+}
 @media (max-width: 480px) {
   .navbar-top,
   .navbar-bottom {
