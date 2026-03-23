@@ -152,17 +152,6 @@ body {
   z-index: 0;
 }
 
-/* Hero Section Video - Reduced Size */
-.hero-image video,
-.hero-image img {
-  max-width: 90%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 28px;
-  animation: bounceSoft 3s ease-in-out infinite;
-}
-
 .floating-circle {
   position: absolute;
   border-radius: 50%;
@@ -285,10 +274,12 @@ body {
   text-align: center;
 }
 
-.hero-image img {
-  max-width: 100%;
+.hero-video {
+  max-width: 90%;
   height: auto;
+  border-radius: 28px;
   animation: bounceSoft 3s ease-in-out infinite;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes bounceSoft {
@@ -624,7 +615,6 @@ body {
   }
 }
 
-/* Lottie Container - Simple 1px Stroke */
 .lottie-container {
   flex: 1;
   display: flex;
@@ -664,7 +654,6 @@ body {
   background: white;
 }
 
-/* Floating Leaves Animation */
 .floating-leaves {
   position: absolute;
   top: 0;
@@ -1017,6 +1006,10 @@ body {
     justify-content: center;
   }
   
+  .hero-video {
+    max-width: 85%;
+  }
+  
   .intro-card {
     padding: 1.5rem;
   }
@@ -1062,19 +1055,12 @@ body {
   }
 }
 
-/* Mobile - even smaller */
-@media (max-width: 768px) {
-  .hero-image video {
-    max-width: 85%;
-  }
-}
-
-/* Tablet - medium size */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .hero-image video {
+  .hero-video {
     max-width: 75%;
   }
 }
+
 @media (max-width: 480px) {
   .navbar-top,
   .navbar-bottom {
@@ -1093,6 +1079,10 @@ body {
   .hero-demo {
     padding: 10px 20px;
     font-size: 0.9rem;
+  }
+  
+  .hero-video {
+    max-width: 100%;
   }
   
   .earth-day-wrapper {
