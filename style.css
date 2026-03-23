@@ -12,6 +12,8 @@ body {
   background: #fefdf7;
   color: #1e293b;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ============================================
@@ -459,6 +461,8 @@ body {
   background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .earth-day-section::before {
@@ -504,6 +508,7 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .earth-day-wrapper {
@@ -518,6 +523,9 @@ body {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(76, 175, 80, 0.3);
   transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .earth-day-wrapper:hover {
@@ -652,6 +660,8 @@ body {
   border-radius: 50%;
   display: block;
   background: white;
+  width: 280px;
+  height: 280px;
 }
 
 .floating-leaves {
@@ -661,6 +671,7 @@ body {
   right: 0;
   bottom: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .leaf {
@@ -672,36 +683,36 @@ body {
 }
 
 .leaf:nth-child(1) {
-  top: -30px;
-  left: 10%;
+  top: -20px;
+  left: 5%;
   animation-delay: 0s;
   animation-duration: 4s;
 }
 
 .leaf:nth-child(2) {
-  top: 20%;
-  right: -35px;
+  top: 15%;
+  right: 2%;
   animation-delay: 0.5s;
   animation-duration: 5s;
 }
 
 .leaf:nth-child(3) {
-  bottom: -25px;
-  left: 20%;
+  bottom: -15px;
+  left: 10%;
   animation-delay: 1s;
   animation-duration: 4.5s;
 }
 
 .leaf:nth-child(4) {
-  top: 50%;
-  left: -30px;
+  top: 40%;
+  left: -15px;
   animation-delay: 1.5s;
   animation-duration: 5.5s;
 }
 
 .leaf:nth-child(5) {
-  bottom: 15%;
-  right: 10%;
+  bottom: 10%;
+  right: 3%;
   animation-delay: 2s;
   animation-duration: 4s;
 }
@@ -951,18 +962,25 @@ body {
     flex-direction: column;
     text-align: center;
     padding: 2rem;
+    gap: 2rem;
   }
   
   .earth-day-content {
     text-align: center;
+    width: 100%;
   }
   
   .earth-day-content h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   
   .earth-day-content p {
     max-width: 100%;
+    width: 100%;
+  }
+  
+  .lottie-container {
+    width: 100%;
   }
   
   .lottie-wrapper dotlottie-wc {
@@ -1050,8 +1068,50 @@ body {
     gap: 1rem;
   }
   
+  .earth-day-section {
+    padding: 3rem 1rem;
+  }
+  
+  .earth-day-wrapper {
+    padding: 1.5rem;
+    border-radius: 40px;
+    gap: 1.8rem;
+  }
+  
+  .earth-day-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .earth-day-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .earth-day-badge {
+    font-size: 0.8rem;
+    padding: 5px 14px;
+  }
+  
+  .earth-day-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .lottie-wrapper dotlottie-wc {
+    width: 200px;
+    height: 200px;
+  }
+  
   .leaf {
     font-size: 1.2rem;
+  }
+  
+  .leaf:nth-child(2) {
+    right: 0;
+  }
+  
+  .leaf:nth-child(4) {
+    left: -10px;
   }
 }
 
@@ -1085,26 +1145,36 @@ body {
     max-width: 100%;
   }
   
+  .earth-day-section {
+    padding: 2rem 0.75rem;
+  }
+  
   .earth-day-wrapper {
-    padding: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 32px;
   }
   
   .earth-day-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   
   .earth-day-content p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+  }
+  
+  .earth-day-badge {
+    font-size: 0.75rem;
+    padding: 4px 12px;
   }
   
   .earth-day-btn {
-    padding: 10px 28px;
-    font-size: 0.95rem;
+    padding: 8px 20px;
+    font-size: 0.85rem;
   }
   
   .lottie-wrapper dotlottie-wc {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
   
   .section-title h2 {
@@ -1120,6 +1190,55 @@ body {
   }
   
   .testimonial-card p {
+    font-size: 0.9rem;
+  }
+  
+  .leaf {
+    font-size: 1rem;
+  }
+  
+  .leaf:nth-child(1) {
+    left: 2%;
+  }
+  
+  .leaf:nth-child(2) {
+    right: -8px;
+    top: 10%;
+  }
+  
+  .leaf:nth-child(3) {
+    left: 5%;
+  }
+  
+  .leaf:nth-child(4) {
+    left: -8px;
+  }
+  
+  .leaf:nth-child(5) {
+    right: 0;
+    bottom: 5%;
+  }
+}
+
+@media (max-width: 380px) {
+  .earth-day-wrapper {
+    padding: 1rem;
+  }
+  
+  .earth-day-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .earth-day-content p {
+    font-size: 0.85rem;
+  }
+  
+  .lottie-wrapper dotlottie-wc {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .leaf {
     font-size: 0.9rem;
   }
 }
