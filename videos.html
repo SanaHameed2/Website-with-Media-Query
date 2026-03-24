@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mathlings | Math Videos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="videos.css">
+</head>
+<body>
+
+  <nav class="navbar-top">
+    <div class="logo-container">
+      <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="logo-img" />
+      <h1>Mathlings</h1>
+    </div>
+    <div class="nav-top-btn">
+      <button class="login-btn" id="loginBtn">Login</button>
+    </div>
+  </nav>
+
+  <div class="navbar-bottom">
+    <div class="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Math Games</a></li>
+        <li><a href="videos.html" class="active-nav">Videos</a></li>
+        <li><a href="stories.html">Stories</a></li>
+      </ul>
+    </div>
+    <div class="navbar-btn">
+      <button class="join-btn">Join Us</button>
+      <button class="learn-btn">Learn More</button>
+    </div>
+  </div>
+
+  <div class="page-hero">
+    <h1>🎬 Learn with <span class="highlight">Fun Videos</span></h1>
+    <p>Animated math lessons that make learning exciting and easy to understand</p>
+  </div>
+
+  <div class="video-filters">
+    <button class="filter-btn active" data-filter="all">All Videos</button>
+    <button class="filter-btn" data-filter="addition">Addition</button>
+    <button class="filter-btn" data-filter="multiplication">Multiplication</button>
+    <button class="filter-btn" data-filter="fractions">Fractions</button>
+    <button class="filter-btn" data-filter="geometry">Geometry</button>
+  </div>
+
+  <div class="videos-grid" id="videosGrid"></div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="footer-logo-img" />
+        <span>Mathlings</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Parents</a>
+        <a href="#">Support</a>
+      </div>
+      <p class="copyright">&copy; 2025 Mathlings — joyful math for every kid</p>
+    </div>
+  </footer>
+
+  <script src="videos.js"></script>
+</body>
+</html>
