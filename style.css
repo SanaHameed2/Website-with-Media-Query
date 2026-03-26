@@ -474,10 +474,8 @@ body {
   font-size: 0.9rem;
   color: #64748b;
 }
+/* divider */
 
-/* ============================================
-   SECTION DIVIDERS
-   ============================================ */
 .section-divider {
   width: 100%;
   line-height: 0;
