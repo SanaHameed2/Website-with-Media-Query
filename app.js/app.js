@@ -1,114 +1,68 @@
-const loginToggle = document.getElementById('loginToggle');
-const signupToggle = document.getElementById('signupToggle');
-const loginForm = document.getElementById('loginForm');
-const signupForm = document.getElementById('signupForm');
-const switchToSignup = document.getElementById('switchToSignup');
-const switchToLogin = document.getElementById('switchToLogin');
-const loginFormElement = document.getElementById('loginFormElement');
-const signupFormElement = document.getElementById('signupFormElement');
+// ============================================
+// MATHLINGS - MAIN JAVASCRIPT (app.js)
+// ============================================
 
-function showLogin() {
-  loginToggle.classList.add('active');
-  signupToggle.classList.remove('active');
-  loginForm.classList.add('active');
-  signupForm.classList.remove('active');
-}
-
-function showSignup() {
-  signupToggle.classList.add('active');
-  loginToggle.classList.remove('active');
-  signupForm.classList.add('active');
-  loginForm.classList.remove('active');
-}
-
-if (loginToggle) {
-  loginToggle.addEventListener('click', showLogin);
-}
-
-if (signupToggle) {
-  signupToggle.addEventListener('click', showSignup);
-}
-
-if (switchToSignup) {
-  switchToSignup.addEventListener('click', function(e) {
-    e.preventDefault();
-    showSignup();
-  });
-}
-
-if (switchToLogin) {
-  switchToLogin.addEventListener('click', function(e) {
-    e.preventDefault();
-    showLogin();
-  });
-}
-
-if (loginFormElement) {
-  loginFormElement.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('loginEmail').value;
-    const password = document.getElementById('loginPassword').value;
-    const rememberMe = document.getElementById('rememberMe').checked;
-    
-    if (email && password) {
-      if (rememberMe) {
-        localStorage.setItem('rememberedUser', email);
-      } else {
-        localStorage.removeItem('rememberedUser');
-      }
-      alert('Welcome back, ' + email + '! 🎈 Ready for math adventures?');
-      window.location.href = 'index.html';
-    } else {
-      alert('Please enter both email and password! 🌟');
-    }
-  });
-}
-
-if (signupFormElement) {
-  signupFormElement.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('signupName').value;
-    const email = document.getElementById('signupEmail').value;
-    const password = document.getElementById('signupPassword').value;
-    const confirmPassword = document.getElementById('signupConfirmPassword').value;
-    const agreeTerms = document.getElementById('agreeTerms').checked;
-    
-    if (!name || !email || !password || !confirmPassword) {
-      alert('Please fill in all fields! 🌟');
-      return;
-    }
-    
-    if (password !== confirmPassword) {
-      alert('Passwords do not match! 😅');
-      return;
-    }
-    
-    if (!agreeTerms) {
-      alert('Please agree to the terms & conditions! 📝');
-      return;
-    }
-    
-    if (password.length < 6) {
-      alert('Password must be at least 6 characters! 🔒');
-      return;
-    }
-    
-    alert('🎉 Welcome to Mathlings, ' + name + '! Check ' + email + ' to start your adventure!');
-    showLogin();
-    signupFormElement.reset();
-  });
-}
-
-window.addEventListener('load', function() {
-  const rememberedUser = localStorage.getItem('rememberedUser');
-  if (rememberedUser) {
-    const loginEmail = document.getElementById('loginEmail');
-    if (loginEmail) {
-      loginEmail.value = rememberedUser;
-      const rememberCheckbox = document.getElementById('rememberMe');
-      if (rememberCheckbox) {
-        rememberCheckbox.checked = true;
-      }
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Navigation Buttons
+  const loginBtn = document.getElementById('loginBtn');
+  const joinBtn = document.getElementById('joinBtn');
+  const learnMoreBtn = document.getElementById('learnMoreBtn');
+  const heroStartBtn = document.querySelector('.hero-start');
+  const heroDemoBtn = document.querySelector('.hero-demo');
+  const earthDayBtn = document.querySelector('.earth-day-btn');
+  const cardBtns = document.querySelectorAll('.card-btn');
+  
+  // Login button
+  if (loginBtn) {
+    loginBtn.addEventListener('click', function() {
+      window.location.href = 'login.html';
+    });
   }
+  
+  // Join Us button
+  if (joinBtn) {
+    joinBtn.addEventListener('click', function() {
+      window.location.href = 'login.html';
+    });
+  }
+  
+  // Learn More button
+  if (learnMoreBtn) {
+    learnMoreBtn.addEventListener('click', function() {
+      window.location.href = 'about.html';
+    });
+  }
+  
+  // Start Free button
+  if (heroStartBtn) {
+    heroStartBtn.addEventListener('click', function() {
+      window.location.href = 'login.html';
+    });
+  }
+  
+  // See how it works button
+  if (heroDemoBtn) {
+    heroDemoBtn.addEventListener('click', function() {
+      window.location.href = 'demo.html';
+    });
+  }
+  
+  // All Play now buttons
+  if (cardBtns.length > 0) {
+    cardBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        window.location.href = 'math-games.html';
+      });
+    });
+  }
+  
+  // Earth Day button
+  if (earthDayBtn) {
+    earthDayBtn.addEventListener('click', function() {
+      window.location.href = 'eco-collection.html';
+    });
+  }
+  
+  console.log('Mathlings website ready! 🚀');
 });

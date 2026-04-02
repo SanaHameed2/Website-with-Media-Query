@@ -1,332 +1,434 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Mathlings | Learn Math with Fun</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.3/dist/dotlottie-wc.js" type="module"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- navbar -->
-<nav class="navbar-top">
-  <div class="logo-container">
-    <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="logo-img" />
-    <h1>Mathlings</h1>
-  </div>
-  <div class="nav-top-btn">
-    <button class="login-btn" id="loginBtn">Login</button>
-  </div>
-</nav>
-
-<div class="navbar-bottom">
-  <div class="nav-links">
-    <ul>
-      <li><a href="index.html" class="active-nav">Home</a></li>
-      <li><a href="math-games.html">Math Games</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="stories.html">Stories</a></li>
-    </ul>
-  </div>
-  <div class="navbar-btn">
-    <button class="join-btn" id="joinBtn">Join Us</button>
-    <button class="learn-btn" id="learnMoreBtn">Learn More</button>
-  </div>
-</div>
-
-  <!-- HERO SECTION WITH MP4 VIDEO -->
-  <section class="hero-section">
-    <div class="hero-blob"></div>
-    <div class="floating-circle circle-1"></div>
-    <div class="floating-circle circle-2"></div>
-    <div class="floating-circle circle-3"></div>
-    
-    <div class="hero-container">
-      <div class="hero-text">
-        <h1>Math that feels like <span class="highlight">adventure</span></h1>
-        <p>Adaptive quests, cool battles & rewarding challenges — every step builds confidence.</p>
-        <div class="hero-buttons">
-          <button class="hero-start">Start Free</button>
-          <button class="hero-demo">See how it works</button>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Mathlings | Learn Math with Fun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.3/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar-top">
+      <div class="logo-container">
+        <img
+          src="assets/images/mathlings-icon.png"
+          alt="Mathlings Logo"
+          class="logo-img"
+        />
+        <h1>Mathlings</h1>
       </div>
-      
-      <div class="hero-image">
-        <video autoplay loop muted playsinline class="hero-video">
-          <source src="assets/images/animation.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div class="nav-top-btn">
+        <button class="login-btn" id="loginBtn">Login</button>
+      </div>
+    </nav>
+
+    <div class="navbar-bottom">
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html" class="active-nav">Home</a></li>
+          <li><a href="math-games.html">Math Games</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="stories.html">Stories</a></li>
+        </ul>
+      </div>
+      <div class="navbar-btn">
+        <button class="join-btn" id="joinBtn">Join Us</button>
+        <button class="learn-btn" id="learnMoreBtn">Learn More</button>
       </div>
     </div>
-  </section>
 
-  <div class="intro-wrapper">
-    <div class="intro-card">
-      <span class="intro-badge">🌟 adaptive learning</span>
-      <h2>Welcome to Mathlings</h2>
-      <p>Students answer adaptive math questions to win battles, complete quests, and unlock rewards. Every journey is personalized to make math joyful and effective.</p>
-      <div class="intro-stats">
-        <div><strong>500k+</strong><span>happy learners</span></div>
-        <div><strong>98%</strong><span>skill growth</span></div>
-        <div><strong>1,200+</strong><span>math challenges</span></div>
-      </div>
-    </div>
-  </div>
+    <!-- HERO SECTION WITH VIDEO -->
+    <section class="hero-section">
+      <div class="hero-blob"></div>
+      <div class="floating-circle circle-1"></div>
+      <div class="floating-circle circle-2"></div>
+      <div class="floating-circle circle-3"></div>
 
-  <div class="section-divider">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="scallopGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#facc15" stop-opacity="0.35"/>
-          <stop offset="50%" stop-color="#2563eb" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#facc15" stop-opacity="0.35"/>
-        </linearGradient>
-      </defs>
-      <path d="M0,35 Q150,20 300,35 T600,35 T900,35 T1200,35 L1200,60 L0,60 Z" fill="url(#scallopGradient1)"/>
-      <circle cx="150" cy="28" r="9" fill="#facc15" fill-opacity="0.3"/>
-      <circle cx="450" cy="32" r="7" fill="#2563eb" fill-opacity="0.3"/>
-      <circle cx="750" cy="25" r="8" fill="#facc15" fill-opacity="0.3"/>
-      <circle cx="1050" cy="30" r="9" fill="#2563eb" fill-opacity="0.3"/>
-    </svg>
-  </div>
-  <!-- cards -->
-
-  <div class="cards-section">
-    <div class="section-title">
-      <h2>Explore & play</h2>
-      <p>Fun ways to master math fundamentals</p>
-    </div>
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-img">
-          <img src="assets/images/Number Ninjas.png" alt="Addition game" />
-        </div>
-        <h3>Number Ninjas</h3>
-        <p>Beat the clock with addition & subtraction challenges.</p>
-        <button class="card-btn">Play now →</button>
-      </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="assets/images/multiplication master.png" alt="Multiplication" />
-        </div>
-        <h3>Multiplication Masters</h3>
-        <p>Fun puzzles that make times tables stick.</p>
-        <button class="card-btn">Play now →</button>
-      </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="assets/images/Fraction fable.png" alt="Fractions" />
-        </div>
-        <h3>Fraction Fables</h3>
-        <p>Visual stories that explain parts & wholes.</p>
-        <button class="card-btn">Play now →</button>
-      </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="assets/images/Shape Explorer Mascot.png" alt="Geometry" />
-        </div>
-        <h3>Shape Explorers</h3>
-        <p>Discover geometry through interactive puzzles.</p>
-        <button class="card-btn">Play now →</button>
-      </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="assets/images/Shape Explorer Mascot.png" alt="Money math" />
-        </div>
-        <h3>Coin & Cash Quest</h3>
-        <p>Real-world money skills & mental math.</p>
-        <button class="card-btn">Play now →</button>
-      </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="assets/images/Shape Explorer Mascot.png" alt="Logic" />
-        </div>
-        <h3>Brain Builders</h3>
-        <p>Logic puzzles & critical thinking challenges.</p>
-        <button class="card-btn">Play now →</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- <div class="section-divider">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="scallopGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#2563eb" stop-opacity="0.35"/>
-          <stop offset="50%" stop-color="#facc15" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#2563eb" stop-opacity="0.35"/>
-        </linearGradient>
-      </defs>
-      <path d="M0,30 Q200,45 400,30 T800,30 T1200,30 L1200,60 L0,60 Z" fill="url(#scallopGradient2)"/>
-      <circle cx="100" cy="38" r="7" fill="#facc15" fill-opacity="0.3"/>
-      <circle cx="350" cy="42" r="6" fill="#2563eb" fill-opacity="0.3"/>
-      <circle cx="600" cy="35" r="9" fill="#facc15" fill-opacity="0.3"/>
-      <circle cx="850" cy="40" r="7" fill="#2563eb" fill-opacity="0.3"/>
-      <circle cx="1100" cy="37" r="8" fill="#facc15" fill-opacity="0.3"/>
-    </svg>
-  </div> -->
-
-  <section class="earth-day-section">
-    <div class="earth-day-container">
-      <div class="earth-day-wrapper">
-        <div class="earth-day-content">
-          <div class="earth-day-badge">🌍 Every day is Earth Day</div>
-          <h2>Plant trees, shop sustainably <span class="earth-highlight">and more</span></h2>
-          <p>Join us in making a difference! Every small action counts toward a healthier planet. Start your eco-friendly journey today.</p>
-          <button class="earth-day-btn">See collection →</button>
-        </div>
-        
-        <div class="lottie-container">
-          <div class="lottie-wrapper">
-            <dotlottie-wc
-              src="https://lottie.host/ccecac13-19cb-4a02-8a3e-550bb81d8a65/0uZOebTWWe.lottie"
-              style="width: 280px; height: 280px"
-              autoplay
-              loop
-            ></dotlottie-wc>
-          </div>
-          <div class="floating-leaves">
-            <span class="leaf">🍃</span>
-            <span class="leaf">🌿</span>
-            <span class="leaf">🍂</span>
-            <span class="leaf">🍁</span>
-            <span class="leaf">🌾</span>
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>Math that feels like <span class="highlight">adventure</span></h1>
+          <p>
+            Adaptive quests, cool battles & rewarding challenges — every step
+            builds confidence.
+          </p>
+          <div class="hero-buttons">
+            <button class="hero-start">Start Free</button>
+            <button class="hero-demo">See how it works</button>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- feature -->
 
-  <div class="features-section">
-    <div class="section-title">
-      <h2>Why kids love Mathlings</h2>
-      <p>Designed to make every math moment magical</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🎮</div>
-        <h3>Game-Based Learning</h3>
-        <p>Earn points, unlock achievements, and level up while mastering math skills.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>Adaptive Path</h3>
-        <p>Questions adjust to each student's skill level for personalized growth.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🏆</div>
-        <h3>Rewards & Badges</h3>
-        <p>Celebrate milestones with digital rewards that keep motivation high.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">👨‍👩‍👧</div>
-        <h3>Parent Dashboard</h3>
-        <p>Track progress and celebrate achievements together.</p>
-      </div>
-    </div>
-  </div>
-  <!-- divider -->
-
-  <div class="section-divider">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="scallopGradient4" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#2563eb" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#facc15" stop-opacity="0.35"/>
-        </linearGradient>
-      </defs>
-      <path d="M0,40 Q150,25 300,40 T600,40 T900,40 T1200,40 L1200,60 L0,60 Z" fill="url(#scallopGradient4)"/>
-      <circle cx="120" cy="48" r="7" fill="#2563eb" fill-opacity="0.3"/>
-      <circle cx="400" cy="44" r="9" fill="#facc15" fill-opacity="0.3"/>
-      <circle cx="680" cy="50" r="6" fill="#2563eb" fill-opacity="0.3"/>
-      <circle cx="950" cy="46" r="8" fill="#facc15" fill-opacity="0.3"/>
-    </svg>
-  </div>
-  <!-- testimonial -->
-
-  <div class="testimonials-section">
-    <div class="section-title">
-      <h2>Trusted by families</h2>
-      <p>See what parents and teachers are saying</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="quote">"</div>
-        <p>My daughter went from struggling with fractions to actually enjoying them. Mathlings made math fun again!</p>
-        <div class="testimonial-author">
-          <strong>Sarah Johnson</strong>
-          <span>Parent of 3rd grader</span>
+        <div class="hero-image">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="hero-video"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 30px;
+            "
+          >
+            <source src="assets/images/animation.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
-      <div class="testimonial-card">
-        <div class="quote">"</div>
-        <p>As a teacher, I love how the platform adapts to each student's pace. The engagement is incredible.</p>
-        <div class="testimonial-author">
-          <strong>Mr. David Chen</strong>
-          <span>Elementary Teacher</span>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="quote">"</div>
-        <p>The quests and battles keep my son motivated. He asks to practice math now - that's a win!</p>
-        <div class="testimonial-author">
-          <strong>Michelle Rodriguez</strong>
-          <span>Mom of 2</span>
+    </section>
+
+    <div class="intro-wrapper">
+      <div class="intro-card">
+        <span class="intro-badge">🌟 adaptive learning</span>
+        <img
+          src="assets/images/welcome.png"
+          alt="Welcome to Mathlings"
+          style="max-width: 200px; margin: 10px auto; display: block"
+        />
+        <h2>Welcome to Mathlings</h2>
+        <p>
+          Students answer adaptive math questions to win battles, complete
+          quests, and unlock rewards. Every journey is personalized to make math
+          joyful and effective.
+        </p>
+        <div class="intro-stats">
+          <div><strong>500k+</strong><span>happy learners</span></div>
+          <div><strong>98%</strong><span>skill growth</span></div>
+          <div><strong>1,200+</strong><span>math challenges</span></div>
         </div>
       </div>
     </div>
-  </div>
-<!-- divider -->
-  <div class="section-divider">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="scallopGradient5" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#facc15" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#2563eb" stop-opacity="0.35"/>
-        </linearGradient>
-      </defs>
-      <path d="M0,35 Q150,20 300,35 T600,35 T900,35 T1200,35 L1200,60 L0,60 Z" fill="url(#scallopGradient5)"/>
-      <circle cx="150" cy="28" r="9" fill="#facc15" fill-opacity="0.3"/>
-      <circle cx="450" cy="32" r="7" fill="#2563eb" fill-opacity="0.3"/>
-      <circle cx="750" cy="25" r="8" fill="#facc15" fill-opacity="0.3"/>
-      <circle cx="1050" cy="30" r="9" fill="#2563eb" fill-opacity="0.3"/>
-    </svg>
-  </div>
-  <!-- video -->
 
-  <div class="video-wrapper">
-    <div class="video-container">
-      <div class="video-text">
-        <h2>Learn with fun videos</h2>
-        <p>Watch and learn — animated math lessons that kids love.</p>
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <defs>
+          <lineargradient
+            id="scallopGradient1"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop offset="0%" stop-color="#facc15" stop-opacity="0.35" />
+            <stop offset="50%" stop-color="#2563eb" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#facc15" stop-opacity="0.35" />
+          </lineargradient>
+        </defs>
+        <path
+          d="M0,35 Q150,20 300,35 T600,35 T900,35 T1200,35 L1200,60 L0,60 Z"
+          fill="url(#scallopGradient1)"
+        />
+        <circle cx="150" cy="28" r="9" fill="#facc15" fill-opacity="0.3" />
+        <circle cx="450" cy="32" r="7" fill="#2563eb" fill-opacity="0.3" />
+        <circle cx="750" cy="25" r="8" fill="#facc15" fill-opacity="0.3" />
+        <circle cx="1050" cy="30" r="9" fill="#2563eb" fill-opacity="0.3" />
+      </svg>
+    </div>
+    <!-- cards -->
+
+    <div class="cards-section">
+      <div class="section-title">
+        <h2>Explore & play</h2>
+        <p>Fun ways to master math fundamentals</p>
       </div>
-      <div class="video-responsive">
-        <iframe src="https://www.youtube.com/embed/XPFSLhUHSX4?si=jzazEldoxAK2KIB8" title="Math learning video for kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/images/Number Ninjas.png" alt="Addition game" />
+          </div>
+          <h3>Number Ninjas</h3>
+          <p>Beat the clock with addition & subtraction challenges.</p>
+          <button class="card-btn">Play now →</button>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="assets/images/multiplication-master.png"
+              alt="Multiplication"
+            />
+          </div>
+          <h3>Multiplication Masters</h3>
+          <p>Fun puzzles that make times tables stick.</p>
+          <button class="card-btn">Play now →</button>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/images/friction-fable.png" alt="Fractions" />
+          </div>
+          <h3>Fraction Fables</h3>
+          <p>Visual stories that explain parts & wholes.</p>
+          <button class="card-btn">Play now →</button>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/images/shape.png" alt="Geometry" />
+          </div>
+          <h3>Shape Explorers</h3>
+          <p>Discover geometry through interactive puzzles.</p>
+          <button class="card-btn">Play now →</button>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/images/coin-cash.png" alt="Money math" />
+          </div>
+          <h3>Coin & Cash Quest</h3>
+          <p>Real-world money skills & mental math.</p>
+          <button class="card-btn">Play now →</button>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/images/brain-builder.png" alt="Logic" />
+          </div>
+          <h3>Brain Builders</h3>
+          <p>Logic puzzles & critical thinking challenges.</p>
+          <button class="card-btn">Play now →</button>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- footer -->
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="footer-logo-img" />
-        <span>Mathlings</span>
+    <section class="earth-day-section">
+      <div class="earth-day-container">
+        <div class="earth-day-wrapper">
+          <div class="earth-day-content">
+            <div class="earth-day-badge">🌍 Every day is Earth Day</div>
+            <h2>
+              Plant trees, shop sustainably
+              <span class="earth-highlight">and more</span>
+            </h2>
+            <p>
+              Join us in making a difference! Every small action counts toward a
+              healthier planet. Start your eco-friendly journey today.
+            </p>
+            <button class="earth-day-btn">See collection →</button>
+          </div>
+
+          <div class="lottie-container">
+            <div class="lottie-wrapper">
+              <dotlottie-wc
+                src="https://lottie.host/ccecac13-19cb-4a02-8a3e-550bb81d8a65/0uZOebTWWe.lottie"
+                style="width: 280px; height: 280px"
+                autoplay
+                loop
+              ></dotlottie-wc>
+            </div>
+            <div class="floating-leaves">
+              <span class="leaf">🍃</span>
+              <span class="leaf">🌿</span>
+              <span class="leaf">🍂</span>
+              <span class="leaf">🍁</span>
+              <span class="leaf">🌾</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#">About</a>
-        <a href="#">Privacy</a>
-        <a href="#">Parents</a>
-        <a href="#">Support</a>
+    </section>
+    <!-- feature -->
+
+    <div class="features-section">
+      <div class="section-title">
+        <h2>Why kids love Mathlings</h2>
+        <p>Designed to make every math moment magical</p>
       </div>
-      <p class="copyright">&copy; 2025 Mathlings — joyful math for every kid</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎮</div>
+          <h3>Game-Based Learning</h3>
+          <p>
+            Earn points, unlock achievements, and level up while mastering math
+            skills.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Adaptive Path</h3>
+          <p>
+            Questions adjust to each student's skill level for personalized
+            growth.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Rewards & Badges</h3>
+          <p>
+            Celebrate milestones with digital rewards that keep motivation high.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👨‍👩‍👧</div>
+          <h3>Parent Dashboard</h3>
+          <p>Track progress and celebrate achievements together.</p>
+        </div>
+      </div>
     </div>
-  </footer>
+    <!-- divider -->
 
-</body>
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <defs>
+          <lineargradient
+            id="scallopGradient4"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop offset="0%" stop-color="#2563eb" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#facc15" stop-opacity="0.35" />
+          </lineargradient>
+        </defs>
+        <path
+          d="M0,40 Q150,25 300,40 T600,40 T900,40 T1200,40 L1200,60 L0,60 Z"
+          fill="url(#scallopGradient4)"
+        />
+        <circle cx="120" cy="48" r="7" fill="#2563eb" fill-opacity="0.3" />
+        <circle cx="400" cy="44" r="9" fill="#facc15" fill-opacity="0.3" />
+        <circle cx="680" cy="50" r="6" fill="#2563eb" fill-opacity="0.3" />
+        <circle cx="950" cy="46" r="8" fill="#facc15" fill-opacity="0.3" />
+      </svg>
+    </div>
+    <!-- testimonial -->
+
+    <div class="testimonials-section">
+      <div class="section-title">
+        <h2>Trusted by families</h2>
+        <p>See what parents and teachers are saying</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="quote">"</div>
+          <p>
+            My daughter went from struggling with fractions to actually enjoying
+            them. Mathlings made math fun again!
+          </p>
+          <div class="testimonial-author">
+            <strong>Sarah Johnson</strong>
+            <span>Parent of 3rd grader</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote">"</div>
+          <p>
+            As a teacher, I love how the platform adapts to each student's pace.
+            The engagement is incredible.
+          </p>
+          <div class="testimonial-author">
+            <strong>Mr. David Chen</strong>
+            <span>Elementary Teacher</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote">"</div>
+          <p>
+            The quests and battles keep my son motivated. He asks to practice
+            math now - that's a win!
+          </p>
+          <div class="testimonial-author">
+            <strong>Michelle Rodriguez</strong>
+            <span>Mom of 2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- divider -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <defs>
+          <lineargradient
+            id="scallopGradient5"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop offset="0%" stop-color="#facc15" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#2563eb" stop-opacity="0.35" />
+          </lineargradient>
+        </defs>
+        <path
+          d="M0,35 Q150,20 300,35 T600,35 T900,35 T1200,35 L1200,60 L0,60 Z"
+          fill="url(#scallopGradient5)"
+        />
+        <circle cx="150" cy="28" r="9" fill="#facc15" fill-opacity="0.3" />
+        <circle cx="450" cy="32" r="7" fill="#2563eb" fill-opacity="0.3" />
+        <circle cx="750" cy="25" r="8" fill="#facc15" fill-opacity="0.3" />
+        <circle cx="1050" cy="30" r="9" fill="#2563eb" fill-opacity="0.3" />
+      </svg>
+    </div>
+    <!-- video -->
+
+    <div class="video-wrapper">
+      <div class="video-container">
+        <div class="video-text">
+          <h2>Learn with fun videos</h2>
+          <p>Watch and learn — animated math lessons that kids love.</p>
+        </div>
+        <div class="video-responsive">
+          <iframe
+            src="https://www.youtube.com/embed/XPFSLhUHSX4?si=jzazEldoxAK2KIB8"
+            title="Math learning video for kids"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="assets/images/mathlings-icon.png"
+            alt="Mathlings Logo"
+            class="footer-logo-img"
+          />
+          <span>Mathlings</span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Parents</a>
+          <a href="#">Support</a>
+        </div>
+        <p class="copyright">
+          &copy; 2025 Mathlings — joyful math for every kid
+        </p>
+      </div>
+    </footer>
+    <script>
+      // direct assign
+      const loginBtn = document.getElementById("loginBtn");
+      if (loginBtn) loginBtn.onclick = () => (location.href = "login.html");
+
+      const joinBtn = document.getElementById("joinBtn");
+      if (joinBtn) joinBtn.onclick = () => (location.href = "login.html");
+
+      const startBtn = document.querySelector(".hero-start");
+      if (startBtn) startBtn.onclick = () => (location.href = "login.html");
+    </script>
+  </body>
 </html>
