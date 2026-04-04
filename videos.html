@@ -1,264 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mathlings | Videos</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav class="navbar-top">
-      <div class="logo-container">
-        <img
-          src="https://placehold.co/44x44/facc15/ffffff?text=M"
-          alt="Mathlings Logo"
-          class="logo-img"
-        />
-        <h1>Mathlings</h1>
-      </div>
-      <button class="login-btn">Login</button>
-    </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mathlings | Math Videos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR TOP -->
+  <nav class="navbar-top">
+    <div class="logo-container">
+      <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="logo-img">
+      <h1>Mathlings</h1>
+    </div>
+    <button class="login-btn" id="loginBtn">Login</button>
+  </nav>
 
-    <div class="navbar-bottom">
-      <div class="nav-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="math-games.html">Math Games</a></li>
-          <li><a href="videos.html" class="active-nav">Videos</a></li>
-          <li><a href="stories.html">Stories</a></li>
-        </ul>
+  <!-- NAVBAR BOTTOM -->
+  <div class="navbar-bottom">
+    <div class="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="math-games.html">Math Games</a></li>
+        <li><a href="videos.html" class="active-nav">Videos</a></li>
+        <li><a href="stories.html">Stories</a></li>
+      </ul>
+    </div>
+    <div class="navbar-btn">
+      <button class="join-btn" id="joinBtn">Join Free</button>
+      <button class="learn-btn" id="learnMoreBtn">Learn More</button>
+    </div>
+  </div>
+
+  <!-- VIDEOS HERO SECTION -->
+  <section class="page-hero">
+    <div class="hero-blob"></div>
+    <div class="floating-circle circle-1"></div>
+    <div class="floating-circle circle-2"></div>
+    <div class="floating-circle circle-3"></div>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Math <span class="highlight">Video Lessons</span></h1>
+        <p>Engaging animated videos that make math concepts easy and fun for young learners. Watch, learn, and master math at your own pace!</p>
+        <div class="hero-buttons">
+          <button class="hero-start" id="watchNowBtn">Start Watching</button>
+          <button class="hero-demo" id="browseBtn">Browse Library</button>
+        </div>
       </div>
-      <div class="navbar-btn">
-        <button class="join-btn">Join Free</button>
-        <button class="learn-btn">Learn More</button>
+      <div class="hero-image">
+        <i class="fas fa-play-circle" style="font-size: 8rem; color: #facc15;"></i>
       </div>
     </div>
+  </section>
 
-    <section class="hero-section">
-      <div class="hero-blob"></div>
-      <div class="floating-circle circle-1"></div>
-      <div class="floating-circle circle-2"></div>
-      <div class="floating-circle circle-3"></div>
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1>Math <span class="highlight">Video Lessons</span></h1>
-          <p>
-            Engaging animated videos that make math concepts easy and fun for
-            young learners. Watch, learn, and master math at your own pace!
-          </p>
-          <div class="hero-buttons">
-            <button class="hero-start">Start Watching</button>
-            <button class="hero-demo">Browse Library</button>
-          </div>
+  <!-- VIDEOS GRID SECTION -->
+  <div class="cards-section">
+    <div class="section-title">
+      <h2>Featured <span class="highlight">Videos</span></h2>
+      <p>Watch, learn, and master math with our fun animations</p>
+    </div>
+    <div class="videos-grid">
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Addition and Subtraction for Kids" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="hero-image">
-          <i
-            class="fas fa-play-circle"
-            style="font-size: 8rem; color: #facc15"
-          ></i>
+        <div class="video-info">
+          <h3>Addition & Subtraction Basics</h3>
+          <p>Learn how to add and subtract with fun examples using fruits, toys, and everyday objects.</p>
+          <div class="video-meta"><span class="video-duration"><i class="far fa-clock"></i> 8:24</span><span class="video-level">Beginner</span></div>
         </div>
       </div>
-    </section>
-
-    <section class="cards-section">
-      <div class="section-title">
-        <h2>Featured Videos</h2>
-        <p>Watch, learn, and master math with our fun animations</p>
-      </div>
-      <div class="videos-grid">
-        <div class="video-card">
-          <div class="video-embed">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder1"
-              title="Addition and Subtraction for Kids"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-info">
-            <h3>Addition & Subtraction Basics</h3>
-            <p>
-              Learn how to add and subtract with fun examples using fruits,
-              toys, and everyday objects.
-            </p>
-            <div class="video-meta">
-              <span class="video-duration"
-                ><i class="far fa-clock"></i> 8:24</span
-              >
-              <span class="video-level">Beginner</span>
-            </div>
-          </div>
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Multiplication Made Easy" frameborder="0" allowfullscreen></iframe>
         </div>
-
-        <div class="video-card">
-          <div class="video-embed">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder2"
-              title="Multiplication Made Easy"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-info">
-            <h3>Multiplication Made Easy</h3>
-            <p>
-              Discover fun tricks to memorize multiplication tables and solve
-              problems faster.
-            </p>
-            <div class="video-meta">
-              <span class="video-duration"
-                ><i class="far fa-clock"></i> 10:15</span
-              >
-              <span class="video-level">Intermediate</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="video-card">
-          <div class="video-embed">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder3"
-              title="Understanding Fractions"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-info">
-            <h3>Understanding Fractions</h3>
-            <p>
-              Pizza, chocolate bars, and cakes help explain fractions in the
-              yummiest way possible!
-            </p>
-            <div class="video-meta">
-              <span class="video-duration"
-                ><i class="far fa-clock"></i> 12:03</span
-              >
-              <span class="video-level">Intermediate</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="video-card">
-          <div class="video-embed">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder4"
-              title="Geometry Shapes Adventure"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-info">
-            <h3>Geometry Shapes Adventure</h3>
-            <p>
-              Explore circles, squares, triangles, and more in this fun
-              shape-hunting journey.
-            </p>
-            <div class="video-meta">
-              <span class="video-duration"
-                ><i class="far fa-clock"></i> 9:42</span
-              >
-              <span class="video-level">Beginner</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="video-card">
-          <div class="video-embed">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder5"
-              title="Division for Beginners"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-info">
-            <h3>Division for Beginners</h3>
-            <p>
-              Learn how to share equally and solve division problems with simple
-              step-by-step examples.
-            </p>
-            <div class="video-meta">
-              <span class="video-duration"
-                ><i class="far fa-clock"></i> 11:30</span
-              >
-              <span class="video-level">Intermediate</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="video-card">
-          <div class="video-embed">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder6"
-              title="Decimals & Percentages"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-info">
-            <h3>Decimals & Percentages</h3>
-            <p>
-              Master decimals and percentages with real-world examples like
-              shopping and discounts.
-            </p>
-            <div class="video-meta">
-              <span class="video-duration"
-                ><i class="far fa-clock"></i> 13:18</span
-              >
-              <span class="video-level">Advanced</span>
-            </div>
-          </div>
+        <div class="video-info">
+          <h3>Multiplication Made Easy</h3>
+          <p>Discover fun tricks to memorize multiplication tables and solve problems faster.</p>
+          <div class="video-meta"><span class="video-duration"><i class="far fa-clock"></i> 10:15</span><span class="video-level">Intermediate</span></div>
         </div>
       </div>
-    </section>
-
-    <section class="video-wrapper">
-      <div class="video-container">
-        <div class="video-text">
-          <h2>Watch Our <span class="highlight">Latest Video</span></h2>
-          <p>New math lessons added every week!</p>
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Understanding Fractions" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="video-responsive">
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Featured Math Video"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+        <div class="video-info">
+          <h3>Understanding Fractions</h3>
+          <p>Pizza, chocolate bars, and cakes help explain fractions in the yummiest way possible!</p>
+          <div class="video-meta"><span class="video-duration"><i class="far fa-clock"></i> 12:03</span><span class="video-level">Intermediate</span></div>
         </div>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img
-            src="https://placehold.co/40x40/facc15/ffffff?text=M"
-            alt="Mathlings Logo"
-            class="footer-logo-img"
-          />
-          <span>Mathlings</span>
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Geometry Shapes Adventure" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="math-games.html">Math Games</a>
-          <a href="videos.html">Videos</a>
-          <a href="stories.html">Stories</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-        </div>
-        <div class="copyright">
-          <p>&copy; 2025 Mathlings. Making math fun for every child.</p>
+        <div class="video-info">
+          <h3>Geometry Shapes Adventure</h3>
+          <p>Explore circles, squares, triangles, and more in this fun shape-hunting journey.</p>
+          <div class="video-meta"><span class="video-duration"><i class="far fa-clock"></i> 9:42</span><span class="video-level">Beginner</span></div>
         </div>
       </div>
-    </footer>
-  </body>
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Division for Beginners" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Division for Beginners</h3>
+          <p>Learn how to share equally and solve division problems with simple step-by-step examples.</p>
+          <div class="video-meta"><span class="video-duration"><i class="far fa-clock"></i> 11:30</span><span class="video-level">Intermediate</span></div>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Decimals & Percentages" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Decimals & Percentages</h3>
+          <p>Master decimals and percentages with real-world examples like shopping and discounts.</p>
+          <div class="video-meta"><span class="video-duration"><i class="far fa-clock"></i> 13:18</span><span class="video-level">Advanced</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED VIDEO SECTION -->
+  <div class="video-wrapper">
+    <div class="video-container">
+      <div class="video-text">
+        <h2>Watch Our <span class="highlight">Latest Video</span></h2>
+        <p>New math lessons added every week!</p>
+      </div>
+      <div class="video-responsive">
+        <iframe src="https://www.youtube.com/embed/XPFSLhUHSX4" title="Featured Math Video" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER SECTION -->
+  <section class="newsletter-section">
+    <div class="newsletter-container">
+      <div class="newsletter-content">
+        <i class="fas fa-envelope-open-text"></i>
+        <h3>New Video Every Week!</h3>
+        <p>Get notified when we release new math video lessons.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button>Subscribe <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="footer-logo-img">
+        <span>Mathlings</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="math-games.html">Math Games</a>
+        <a href="videos.html">Videos</a>
+        <a href="stories.html">Stories</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+      <div class="copyright"><p>&copy; 2025 Mathlings. Making math fun for every child.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('loginBtn')?.addEventListener('click', () => location.href = 'login.html');
+    document.getElementById('joinBtn')?.addEventListener('click', () => location.href = 'login.html');
+  </script>
+</body>
 </html>
