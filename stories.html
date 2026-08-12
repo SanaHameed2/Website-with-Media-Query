@@ -2,373 +2,551 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mathlings | Math Stories</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Stories | Mathlings — Math Adventures for Kids</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stories.css">
 </head>
-<body>
-  <nav class="navbar-top">
-    <div class="logo-container">
-      <img src="https://placehold.co/44x44/facc15/ffffff?text=M" alt="Mathlings Logo" class="logo-img">
-      <h1>Mathlings</h1>
-    </div>
-    <button class="login-btn">Login</button>
-  </nav>
+<body class="stories-page">
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-  <div class="navbar-bottom">
-    <div class="nav-links">
-      <ul>
+  <!-- NAVIGATION -->
+  <nav class="stories-nav" aria-label="Main">
+    <div class="container stories-nav__inner">
+      <a href="index.html" class="stories-nav__logo">
+        <span class="stories-nav__logo-icon" aria-hidden="true">🦊</span>
+        <span>Mathlings</span>
+      </a>
+
+      <ul class="stories-nav__links" id="mobileNav">
         <li><a href="index.html">Home</a></li>
         <li><a href="math-games.html">Math Games</a></li>
         <li><a href="videos.html">Videos</a></li>
-        <li><a href="stories.html" class="active-nav">Stories</a></li>
+        <li><a href="stories.html" aria-current="page">Stories</a></li>
       </ul>
-    </div>
-    <div class="navbar-btn">
-      <button class="join-btn">Join Free</button>
-      <button class="learn-btn">Learn More</button>
-    </div>
-  </div>
 
-  <section class="stories-hero">
-    <div class="stories-hero-blob"></div>
-    <div class="stories-hero-container">
-      <div class="stories-hero-text">
-        <span class="story-badge"><i class="fas fa-book-open"></i> Weekly Adventures</span>
-        <h1>Math <span class="highlight">Story Time</span></h1>
-        <p>Where numbers come alive through magical tales! Join our characters on exciting adventures while learning math naturally.</p>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Interactive Stories</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-number">15K+</span>
-            <span class="stat-label">Happy Readers</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-number">4.9</span>
-            <span class="stat-label">Parent Rating ★</span>
-          </div>
-        </div>
-      </div>
-      <div class="stories-hero-image">
-        <div class="floating-book">
-          <i class="fas fa-book-open"></i>
-          <div class="sparkles">✨📚✨</div>
-        </div>
+      <div class="stories-nav__actions">
+        <a href="login.html" class="btn btn--ghost btn--small">Login</a>
+        <a href="login.html" class="btn btn--blue btn--small">Join Free</a>
+        <button class="stories-nav__mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" id="navToggle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <section class="featured-story-section">
-    <div class="featured-story-container">
-      <div class="featured-story-badge">
-        <i class="fas fa-crown"></i> Story of the Week
+  <main id="main">
+    <!-- HERO -->
+    <section class="stories-hero" aria-labelledby="hero-title">
+      <div class="stories-hero__bg" aria-hidden="true"></div>
+      <div class="stories-hero__decor stories-hero__decor--star" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 2l6 14h16l-12 9 4 15-14-10-14 10 4-15-12-9h16z"/></svg>
       </div>
-      <div class="featured-story-content">
-        <div class="featured-story-info">
-          <h2>The Great Number Kingdom Rescue</h2>
-          <div class="story-meta-tags">
-            <span class="meta-tag"><i class="fas fa-child"></i> Ages 6-8</span>
-            <span class="meta-tag"><i class="fas fa-clock"></i> 12 min read</span>
-            <span class="meta-tag"><i class="fas fa-star"></i> Adventure</span>
-          </div>
-          <p>Princess Ten and her brave friend Seven must solve ancient math puzzles to save the Number Kingdom from the sneaky Subtraction Sorcerer. Join them on this thrilling journey through counting mountains, addition valleys, and the mysterious maze of multiplication!</p>
-          <div class="featured-buttons">
-            <button class="read-now-btn"><i class="fas fa-play"></i> Start Reading</button>
-            <button class="save-btn"><i class="fas fa-bookmark"></i> Save for Later</button>
-          </div>
-        </div>
-        <div class="featured-story-illustration">
-          <div class="illustration-circle">
-            <i class="fas fa-dragon"></i>
-            <i class="fas fa-crown"></i>
-            <i class="fas fa-calculator"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="stories-hero__decor stories-hero__decor--circle" aria-hidden="true"></div>
+      <div class="stories-hero__decor stories-hero__decor--dots" aria-hidden="true"></div>
 
-  <section class="story-categories">
-    <div class="section-header">
-      <h2>Explore by <span class="highlight">Age Group</span></h2>
-      <p>Find the perfect story for your child's learning level</p>
-    </div>
-    <div class="categories-scroll">
-      <div class="category-card ages-3-5">
-        <div class="category-icon"><i class="fas fa-baby-carriage"></i></div>
-        <h3>Ages 3-5</h3>
-        <p>Counting, shapes, patterns</p>
-        <span class="story-count">12 stories</span>
+      <div class="container stories-hero__container">
+        <div class="stories-hero__text">
+          <span class="stories-hero__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Math Story Time
+          </span>
+          <h1 id="hero-title" class="stories-hero__title">Where every number tells a <span class="highlight">story</span></h1>
+          <p class="stories-hero__lead">Dive into magical worlds where math comes alive through adventure, mystery, and wonder. Each tale builds skills while sparking imagination.</p>
+          <div class="stories-hero__actions">
+            <a href="#featured" class="btn btn--primary">Start Reading</a>
+            <a href="#browse" class="btn btn--secondary">Browse Stories</a>
+          </div>
+        </div>
+        <div class="stories-hero__visual">
+          <div class="stories-hero__book">
+            <svg class="stories-hero__book-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="60" y="80" width="280" height="240" rx="12" fill="#f5b800" opacity="0.15"/>
+              <rect x="70" y="90" width="260" height="220" rx="8" fill="#fff"/>
+              <path d="M80 100 h120 v200 h-120 a8 8 0 0 1-8-8 v-184 a8 8 0 0 1 8-8z" fill="#fef9c3"/>
+              <path d="M200 100 h120 a8 8 0 0 1 8 8 v184 a8 8 0 0 1-8 8 h-120 v-200z" fill="#fff8e1"/>
+              <rect x="195" y="100" width="10" height="200" fill="#d97706" opacity="0.3"/>
+              <path d="M120 140l4 8 8 2-6 6 1 8-7-4-7 4 1-8-6-6 8-2z" fill="#f5b800"/>
+              <path d="M280 160l3 6 6 1-4 4 1 6-5-3-5 3 1-6-4-4 6-1z" fill="#3b82f6"/>
+              <path d="M150 220l5 10 10 2-8 8 2 10-9-5-9 5 2-10-8-8 10-2z" fill="#f5b800" opacity="0.6"/>
+              <path d="M260 240l3 6 6 1-4 4 1 6-5-3-5 3 1-6-4-4 6-1z" fill="#ec4899"/>
+              <text x="110" y="180" font-family="Quicksand, sans-serif" font-size="28" font-weight="700" fill="#d97706">2</text>
+              <text x="270" y="200" font-family="Quicksand, sans-serif" font-size="32" font-weight="700" fill="#2563eb">+</text>
+              <text x="130" y="260" font-family="Quicksand, sans-serif" font-size="24" font-weight="700" fill="#059669">=</text>
+              <text x="250" y="280" font-family="Quicksand, sans-serif" font-size="28" font-weight="700" fill="#7c3aed">?</text>
+              <circle cx="100" cy="120" r="4" fill="#f5b800" opacity="0.6"/>
+              <circle cx="300" cy="140" r="3" fill="#3b82f6" opacity="0.5"/>
+              <circle cx="180" cy="300" r="5" fill="#ec4899" opacity="0.4"/>
+              <circle cx="320" cy="280" r="3" fill="#10b981" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
       </div>
-      <div class="category-card ages-6-8">
-        <div class="category-icon"><i class="fas fa-chalkboard-user"></i></div>
-        <h3>Ages 6-8</h3>
-        <p>Addition, subtraction, measurement</p>
-        <span class="story-count">18 stories</span>
-      </div>
-      <div class="category-card ages-9-11">
-        <div class="category-icon"><i class="fas fa-brain"></i></div>
-        <h3>Ages 9-11</h3>
-        <p>Multiplication, division, fractions</p>
-        <span class="story-count">15 stories</span>
-      </div>
-      <div class="category-card ages-12plus">
-        <div class="category-icon"><i class="fas fa-rocket"></i></div>
-        <h3>Ages 12+</h3>
-        <p>Decimals, percentages, algebra basics</p>
-        <span class="story-count">8 stories</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="horizontal-stories">
-    <div class="section-header">
-      <h2>Trending <span class="highlight">This Week</span></h2>
-      <p><i class="fas fa-fire" style="color: #f97316;"></i> Most loved by our little mathematicians</p>
-    </div>
-    <div class="horizontal-scroll-wrapper">
-      <div class="horizontal-scroll">
-        <div class="trending-story-card">
-          <div class="trending-badge">#1 Trending</div>
-          <div class="story-emoji">🦄</div>
-          <h3>Unicorn's Multiplication Magic</h3>
-          <p>Learn times tables with Sparkle the Unicorn!</p>
-          <div class="story-stats">
-            <span><i class="fas fa-eye"></i> 2.3K reads</span>
-            <span><i class="fas fa-heart"></i> 456 likes</span>
+    <!-- FEATURED STORY -->
+    <section class="section featured-story" id="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="featured-story__card">
+          <div class="featured-story__content">
+            <span class="badge badge--yellow featured-story__badge">Story of the Week</span>
+            <h2 id="featured-title" class="featured-story__title">The Quest for the Golden Number</h2>
+            <p class="featured-story__text">Join Milo the Mathling on a thrilling adventure through the Kingdom of Numbers. When the Golden Number goes missing, only courage, curiosity, and a little bit of counting can save the day!</p>
+            <div class="featured-story__meta">
+              <span class="featured-story__meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                12 min read
+              </span>
+              <span class="featured-story__meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Ages 6-8
+              </span>
+              <span class="featured-story__meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Addition & Subtraction
+              </span>
+            </div>
+            <div class="featured-story__actions">
+              <a href="#" class="btn btn--blue">Start Reading</a>
+              <button class="btn btn--secondary" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                Save for Later
+              </button>
+            </div>
           </div>
-          <button class="quick-read">Read Now →</button>
-        </div>
-        <div class="trending-story-card">
-          <div class="trending-badge">#2 Trending</div>
-          <div class="story-emoji">🚀</div>
-          <h3>Space Subtraction Mission</h3>
-          <p>Help astronauts subtract to return home!</p>
-          <div class="story-stats">
-            <span><i class="fas fa-eye"></i> 1.8K reads</span>
-            <span><i class="fas fa-heart"></i> 342 likes</span>
+          <div class="featured-story__cover">
+            <div class="featured-story__cover-inner">
+              <div class="featured-story__cover-spine"></div>
+              <span class="featured-story__cover-icon" aria-hidden="true">🏆</span>
+              <span class="featured-story__cover-title">The Golden Number</span>
+              <span class="featured-story__cover-author">A Mathlings Adventure</span>
+            </div>
           </div>
-          <button class="quick-read">Read Now →</button>
-        </div>
-        <div class="trending-story-card">
-          <div class="trending-badge">#3 Trending</div>
-          <div class="story-emoji">🍕</div>
-          <h3>The Fraction Pizza Party</h3>
-          <p>Sharing pizza teaches fractions!</p>
-          <div class="story-stats">
-            <span><i class="fas fa-eye"></i> 1.5K reads</span>
-            <span><i class="fas fa-heart"></i> 289 likes</span>
-          </div>
-          <button class="quick-read">Read Now →</button>
-        </div>
-        <div class="trending-story-card">
-          <div class="trending-badge">#4 Trending</div>
-          <div class="story-emoji">🐉</div>
-          <h3>Dragon's Geometry Quest</h3>
-          <p>Shapes and angles with friendly dragons!</p>
-          <div class="story-stats">
-            <span><i class="fas fa-eye"></i> 1.2K reads</span>
-            <span><i class="fas fa-heart"></i> 234 likes</span>
-          </div>
-          <button class="quick-read">Read Now →</button>
-        </div>
-        <div class="trending-story-card">
-          <div class="trending-badge">#5 Trending</div>
-          <div class="story-emoji">🏴‍☠️</div>
-          <h3>Pirate's Addition Treasure</h3>
-          <p>Add coins to find hidden treasure!</p>
-          <div class="story-stats">
-            <span><i class="fas fa-eye"></i> 987 reads</span>
-            <span><i class="fas fa-heart"></i> 178 likes</span>
-          </div>
-          <button class="quick-read">Read Now →</button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="story-grid-section">
-    <div class="section-header">
-      <h2>All <span class="highlight">Math Stories</span></h2>
-      <p>Discover our complete collection of magical math adventures</p>
-    </div>
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">All Stories</button>
-      <button class="filter-btn" data-filter="counting">Counting</button>
-      <button class="filter-btn" data-filter="addition">Addition</button>
-      <button class="filter-btn" data-filter="multiplication">Multiplication</button>
-      <button class="filter-btn" data-filter="fractions">Fractions</button>
-      <button class="filter-btn" data-filter="geometry">Geometry</button>
-    </div>
-    <div class="stories-masonry-grid" id="storiesGrid">
-      <div class="story-card" data-category="counting">
-        <div class="story-card-front">
-          <div class="story-icon">🐜</div>
-          <h3>Ants on the March</h3>
-          <p>Counting ants leads to a big surprise!</p>
-          <div class="story-card-footer">
-            <span class="age-tag">Ages 3-5</span>
-            <span class="duration-tag"><i class="far fa-clock"></i> 6 min</span>
-          </div>
+    <!-- AGE GROUPS -->
+    <section class="section" id="browse" aria-labelledby="ages-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="ages-title">Browse by <span style="color: var(--ml-brand-dark);">Age</span></h2>
+          <p class="body-text">Find the perfect story for your child's learning journey</p>
+        </div>
+        <div class="age-groups__grid">
+          <article class="age-card age-card--3-5" tabindex="0" role="button" aria-label="Ages 3 to 5, Counting and Shapes, 24 stories">
+            <div class="age-card__icon" aria-hidden="true">🔢</div>
+            <h3 class="age-card__age">Ages 3-5</h3>
+            <p class="age-card__level">Counting & Shapes</p>
+            <p class="age-card__count">24 stories</p>
+          </article>
+          <article class="age-card age-card--6-8" tabindex="0" role="button" aria-label="Ages 6 to 8, Addition and Subtraction, 31 stories">
+            <div class="age-card__icon" aria-hidden="true">➕</div>
+            <h3 class="age-card__age">Ages 6-8</h3>
+            <p class="age-card__level">Addition & Subtraction</p>
+            <p class="age-card__count">31 stories</p>
+          </article>
+          <article class="age-card age-card--9-11" tabindex="0" role="button" aria-label="Ages 9 to 11, Multiplication and Fractions, 28 stories">
+            <div class="age-card__icon" aria-hidden="true">✖️</div>
+            <h3 class="age-card__age">Ages 9-11</h3>
+            <p class="age-card__level">Multiplication & Fractions</p>
+            <p class="age-card__count">28 stories</p>
+          </article>
+          <article class="age-card age-card--12plus" tabindex="0" role="button" aria-label="Ages 12 and up, Algebra and Logic, 19 stories">
+            <div class="age-card__icon" aria-hidden="true">🧩</div>
+            <h3 class="age-card__age">Ages 12+</h3>
+            <p class="age-card__level">Algebra & Logic</p>
+            <p class="age-card__count">19 stories</p>
+          </article>
         </div>
       </div>
-      <div class="story-card" data-category="addition">
-        <div class="story-card-front">
-          <div class="story-icon">🐠</div>
-          <h3>Fish Tank Addition</h3>
-          <p>Emma adds colorful fish to her tank.</p>
-          <div class="story-card-footer">
-            <span class="age-tag">Ages 5-7</span>
-            <span class="duration-tag"><i class="far fa-clock"></i> 8 min</span>
-          </div>
-        </div>
-      </div>
-      <div class="story-card" data-category="multiplication">
-        <div class="story-card-front">
-          <div class="story-icon">🐙</div>
-          <h3>Octopus Multiplication</h3>
-          <p>Eight arms, eight times the fun!</p>
-          <div class="story-card-footer">
-            <span class="age-tag">Ages 7-9</span>
-            <span class="duration-tag"><i class="far fa-clock"></i> 10 min</span>
-          </div>
-        </div>
-      </div>
-      <div class="story-card" data-category="fractions">
-        <div class="story-card-front">
-          <div class="story-icon">🍰</div>
-          <h3>The Fraction Bakery</h3>
-          <p>Baking cakes teaches halves and quarters.</p>
-          <div class="story-card-footer">
-            <span class="age-tag">Ages 8-10</span>
-            <span class="duration-tag"><i class="far fa-clock"></i> 11 min</span>
-          </div>
-        </div>
-      </div>
-      <div class="story-card" data-category="geometry">
-        <div class="story-card-front">
-          <div class="story-icon">🏰</div>
-          <h3>Shape Castle Builders</h3>
-          <p>Building a castle with geometric shapes.</p>
-          <div class="story-card-footer">
-            <span class="age-tag">Ages 6-8</span>
-            <span class="duration-tag"><i class="far fa-clock"></i> 9 min</span>
-          </div>
-        </div>
-      </div>
-      <div class="story-card" data-category="addition">
-        <div class="story-card-front">
-          <div class="story-icon">🍎</div>
-          <h3>Apple Orchard Math</h3>
-          <p>Harvesting apples with Grandpa.</p>
-          <div class="story-card-footer">
-            <span class="age-tag">Ages 4-6</span>
-            <span class="duration-tag"><i class="far fa-clock"></i> 7 min</span>
-          </div>
-        </div>
-      </div>
-      <div class="story-card" data-category="multiplication">
-        <div class="story-card-front">
-          <div class="story-icon">👽</div>
-          <h3>Alien Times Tables</h3>
-          <p>Space friends teach multiplication!</p>
-          <div class="story-card-footer">
-            <span class="age-tag">Ages 7-9</span>
-            <span class="duration-tag"><i class="far fa-clock"></i> 12 min</span>
-          </div>
-        </div>
-      </div>
-      <div class="story-card" data-category="counting">
-        <div class="story-card-front">
-          <div class="story-icon">🎈</div>
-          <h3>Counting Birthday Balloons</h3>
-          <p>Pop! Pop! Count the colorful balloons!</p>
-          <div class="story-card-footer">
-            <span class="age-tag">Ages 3-5</span>
-            <span class="duration-tag"><i class="far fa-clock"></i> 5 min</span>
-          </div>
-        </div>
-      </div>
-      <div class="story-card" data-category="fractions">
-        <div class="story-card-front">
-          <div class="story-icon">🍕</div>
-          <h3>Pizza Party Problems</h3>
-          <p>Sharing pizza = learning fractions!</p>
-          <div class="story-card-footer">
-            <span class="age-tag">Ages 8-10</span>
-            <span class="duration-tag"><i class="far fa-clock"></i> 10 min</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="testimonial-scroll">
-    <div class="section-header">
-      <h2>What <span class="highlight">Parents Say</span></h2>
-      <p>Loved by families around the world</p>
-    </div>
-    <div class="testimonial-horizontal">
-      <div class="testimonial-card">
-        <div class="testimonial-avatar">👩‍👧</div>
-        <p>"My daughter used to hate math. Now she asks me to read these stories every night!"</p>
-        <div class="testimonial-author">— Sarah, mom of 7-year-old</div>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-avatar">👨‍👦</div>
-        <p>"The stories make math feel like magic. My son doesn't even realize he's learning!"</p>
-        <div class="testimonial-author">— Michael, dad of 6-year-old</div>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-avatar">👩‍🏫</div>
-        <p>"I use these stories in my classroom. The kids beg for 'just one more chapter'!"</p>
-        <div class="testimonial-author">— Ms. Rodriguez, 2nd grade teacher</div>
-        <div class="rating">★★★★★</div>
-      </div>
-    </div>
-  </section>
+    <!-- TRENDING STORIES -->
+    <section class="section trending-stories" aria-labelledby="trending-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="trending-title">Trending <span style="color: var(--ml-brand-dark);">This Week</span></h2>
+          <p class="body-text">Most loved by our little mathematicians</p>
+        </div>
+        <div class="trending-stories__scroll" role="region" aria-label="Trending stories carousel" tabindex="0">
+          <article class="trending-card" data-category="geometry">
+            <div class="trending-card__cover">
+              <span class="badge badge--green trending-card__badge">Top Pick</span>
+              <span class="trending-card__icon" aria-hidden="true">🏰</span>
+            </div>
+            <div class="trending-card__body">
+              <h3 class="trending-card__title">The Pattern Palace</h3>
+              <p class="trending-card__text">Discover the secret patterns that protect the royal treasure.</p>
+              <a href="#" class="btn btn--blue btn--small trending-card__btn">Read Now</a>
+            </div>
+          </article>
 
-  <section class="newsletter-section">
-    <div class="newsletter-container">
-      <div class="newsletter-content">
-        <i class="fas fa-envelope-open-text"></i>
-        <h3>New Story Every Week!</h3>
-        <p>Get a free math story delivered to your inbox every Friday.</p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="Enter your email">
-          <button>Subscribe <i class="fas fa-arrow-right"></i></button>
+          <article class="trending-card" data-category="fractions">
+            <div class="trending-card__cover">
+              <span class="badge badge--orange trending-card__badge">Popular</span>
+              <span class="trending-card__icon" aria-hidden="true">🍕</span>
+            </div>
+            <div class="trending-card__body">
+              <h3 class="trending-card__title">The Fraction Fairy's Garden</h3>
+              <p class="trending-card__text">Help the fairy divide her magical garden into perfect portions.</p>
+              <a href="#" class="btn btn--blue btn--small trending-card__btn">Read Now</a>
+            </div>
+          </article>
+
+          <article class="trending-card" data-category="addition">
+            <div class="trending-card__cover">
+              <span class="badge badge--blue trending-card__badge">Popular</span>
+              <span class="trending-card__icon" aria-hidden="true">⚔️</span>
+            </div>
+            <div class="trending-card__body">
+              <h3 class="trending-card__title">The Adding Adventure</h3>
+              <p class="trending-card__text">Team up with Number Knights to defeat the Subtraction Sorcerer.</p>
+              <a href="#" class="btn btn--blue btn--small trending-card__btn">Read Now</a>
+            </div>
+          </article>
+
+          <article class="trending-card" data-category="geometry">
+            <div class="trending-card__cover">
+              <span class="badge badge--purple trending-card__badge">New</span>
+              <span class="trending-card__icon" aria-hidden="true">🐉</span>
+            </div>
+            <div class="trending-card__body">
+              <h3 class="trending-card__title">The Shape-Shifting Dragon</h3>
+              <p class="trending-card__text">Solve shape puzzles to help the dragon find his true form.</p>
+              <a href="#" class="btn btn--blue btn--small trending-card__btn">Read Now</a>
+            </div>
+          </article>
+
+          <article class="trending-card" data-category="counting">
+            <div class="trending-card__cover">
+              <span class="badge badge--yellow trending-card__badge">Popular</span>
+              <span class="trending-card__icon" aria-hidden="true">🐛</span>
+            </div>
+            <div class="trending-card__body">
+              <h3 class="trending-card__title">The Counting Caterpillar</h3>
+              <p class="trending-card__text">Count your way through the garden as a hungry caterpillar.</p>
+              <a href="#" class="btn btn--blue btn--small trending-card__btn">Read Now</a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="https://placehold.co/40x40/facc15/ffffff?text=M" alt="Mathlings Logo" class="footer-logo-img">
+    <!-- ALL STORIES -->
+    <section class="section all-stories" aria-labelledby="all-stories-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="all-stories-title">All <span style="color: var(--ml-brand-dark);">Stories</span></h2>
+          <p class="body-text">Explore our complete library of math adventures</p>
+        </div>
+
+        <div class="story-filters" role="group" aria-label="Filter stories by category">
+          <button class="filter-chip is-active" data-filter="all" aria-pressed="true">
+            <span aria-hidden="true">📚</span> All Stories
+          </button>
+          <button class="filter-chip" data-filter="counting" aria-pressed="false">
+            <span aria-hidden="true">🔢</span> Counting
+          </button>
+          <button class="filter-chip" data-filter="addition" aria-pressed="false">
+            <span aria-hidden="true">➕</span> Addition
+          </button>
+          <button class="filter-chip" data-filter="multiplication" aria-pressed="false">
+            <span aria-hidden="true">✖️</span> Multiplication
+          </button>
+          <button class="filter-chip" data-filter="fractions" aria-pressed="false">
+            <span aria-hidden="true">🍕</span> Fractions
+          </button>
+          <button class="filter-chip" data-filter="geometry" aria-pressed="false">
+            <span aria-hidden="true">🔷</span> Geometry
+          </button>
+          <button class="filter-chip" data-filter="logic" aria-pressed="false">
+            <span aria-hidden="true">🧩</span> Logic
+          </button>
+        </div>
+
+        <div class="stories-grid" id="storiesGrid">
+          <!-- Counting -->
+          <article class="story-card animate-in" data-category="counting">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">🌳</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">One, Two, Tree!</h3>
+              <p class="story-card__text">A little acorn counts its way to becoming the tallest oak in the forest.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 5 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 3-5</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <article class="story-card animate-in" data-category="counting">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">🐛</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">The Counting Caterpillar</h3>
+              <p class="story-card__text">Count colorful leaves as a hungry caterpillar munches through the garden.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 6 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 3-5</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <!-- Addition -->
+          <article class="story-card animate-in" data-category="addition">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">🏆</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">The Quest for the Golden Number</h3>
+              <p class="story-card__text">Milo the Mathling searches for the missing Golden Number in a magical kingdom.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 12 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 6-8</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <article class="story-card animate-in" data-category="addition">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">⚔️</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">The Adding Adventure</h3>
+              <p class="story-card__text">Join the Number Knights on a quest to defeat the Subtraction Sorcerer.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 6-8</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <!-- Multiplication -->
+          <article class="story-card animate-in" data-category="multiplication">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">⚙️</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">The Multiplication Machine</h3>
+              <p class="story-card__text">Fix the broken multiplication machine before the Number Factory shuts down!</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 12 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 9-11</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <article class="story-card animate-in" data-category="multiplication">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">💎</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">Times Table Treasure</h3>
+              <p class="story-card__text">Follow the ancient times-table map to find the hidden treasure of Multiply Island.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 14 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 9-11</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <!-- Fractions -->
+          <article class="story-card animate-in" data-category="fractions">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">🍕</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">Pizza Party Problems</h3>
+              <p class="story-card__text">Share pizza fairly among friends and learn fractions without anyone going hungry.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 8 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 9-11</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <article class="story-card animate-in" data-category="fractions">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">🥧</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">The Mystery of the Missing Pie</h3>
+              <p class="story-card__text">Detective Fraction is on the case when half a pie disappears from the bakery.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 11 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 9-11</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <!-- Geometry -->
+          <article class="story-card animate-in" data-category="geometry">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">🏰</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">The Pattern Palace</h3>
+              <p class="story-card__text">Unlock the palace gates by completing the ancient pattern sequences.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 8 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 6-8</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <article class="story-card animate-in" data-category="geometry">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">🐉</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">The Shape-Shifting Dragon</h3>
+              <p class="story-card__text">Help a dragon find his true form by solving geometric shape puzzles.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 9 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 6-8</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <!-- Logic -->
+          <article class="story-card animate-in" data-category="logic">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">🌀</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">The Logic Labyrinth</h3>
+              <p class="story-card__text">Navigate a maze of riddles and logic puzzles to reach the center.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 16 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 12+</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+
+          <article class="story-card animate-in" data-category="logic">
+            <div class="story-card__cover"><span class="story-card__cover-icon" aria-hidden="true">🧩</span></div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">The Puzzle Master's Challenge</h3>
+              <p class="story-card__text">Face the ultimate challenge from the mysterious Puzzle Master himself.</p>
+              <div class="story-card__meta">
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 13 min</span>
+                <span class="story-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 12+</span>
+              </div>
+            </div>
+            <div class="story-card__footer"><a href="#" class="btn btn--blue btn--small story-card__btn">Read Now</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="testimonials-title">Trusted by <span style="color: var(--ml-brand-dark);">Families</span></h2>
+          <p class="body-text">See what parents and teachers are saying</p>
+        </div>
+        <div class="testimonials__grid">
+          <blockquote class="testimonial">
+            <span class="testimonial__quote" aria-hidden="true">"</span>
+            <p class="testimonial__text">My daughter went from struggling with fractions to actually enjoying them. The story format makes math feel like playtime, not homework.</p>
+            <footer class="testimonial__author">
+              <span class="testimonial__avatar" aria-hidden="true">👩</span>
+              <div><cite class="testimonial__name">Sarah Johnson</cite><p class="testimonial__role">Parent of 3rd grader</p></div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <span class="testimonial__quote" aria-hidden="true">"</span>
+            <p class="testimonial__text">As a teacher, I love how the stories adapt to each student's pace. The engagement in my classroom has never been higher.</p>
+            <footer class="testimonial__author">
+              <span class="testimonial__avatar" aria-hidden="true">👨‍🏫</span>
+              <div><cite class="testimonial__name">Mr. David Chen</cite><p class="testimonial__role">Elementary Teacher</p></div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <span class="testimonial__quote" aria-hidden="true">"</span>
+            <p class="testimonial__text">The math stories keep my son motivated. He asks to read them before bed now — that's a win for any parent!</p>
+            <footer class="testimonial__author">
+              <span class="testimonial__avatar" aria-hidden="true">👩‍👧</span>
+              <div><cite class="testimonial__name">Michelle Rodriguez</cite><p class="testimonial__role">Mom of 2</p></div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section newsletter" aria-labelledby="newsletter-title">
+      <div class="container newsletter__container">
+        <div class="newsletter__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h2 id="newsletter-title" class="newsletter__title">New Story Every Week</h2>
+        <p class="newsletter__text">Get a fresh math adventure delivered to your inbox. Perfect for bedtime reading.</p>
+        <form class="newsletter__form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!';">
+          <label for="email" class="visually-hidden">Email address</label>
+          <input type="email" id="email" class="newsletter__input" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn--primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="stories-footer">
+    <div class="container stories-footer__inner">
+      <a href="index.html" class="stories-footer__logo">
+        <span style="width:32px;height:32px;background:linear-gradient(135deg,var(--ml-brand),var(--ml-blue));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1rem;" aria-hidden="true">🦊</span>
         <span>Mathlings</span>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="math-games.html">Math Games</a>
-        <a href="videos.html">Videos</a>
-        <a href="stories.html">Stories</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2025 Mathlings. Making math fun for every child.</p>
-      </div>
+      </a>
+      <ul class="stories-footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="math-games.html">Math Games</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="stories.html">Stories</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+      <p class="stories-footer__copy">&copy; 2025 Mathlings. Making math magical for every child.</p>
     </div>
   </footer>
 
-  <script src="stories.js"></script>
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if (navToggle && mobileNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+        navToggle.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+    }
+
+    // Story filters with smooth transitions
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const storyCards = document.querySelectorAll('.story-card');
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
+        chip.classList.add('is-active');
+        chip.setAttribute('aria-pressed', 'true');
+        const filter = chip.dataset.filter;
+        storyCards.forEach(card => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          if (match) {
+            card.classList.remove('is-hidden');
+            card.style.display = 'flex';
+            requestAnimationFrame(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; });
+          } else {
+            card.style.opacity = '0'; card.style.transform = 'scale(0.95)';
+            setTimeout(() => { card.classList.add('is-hidden'); card.style.display = 'none'; }, 250);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
