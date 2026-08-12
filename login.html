@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Mathlings</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-card">
+      <div class="logo">
+        <h1>Mathlings</h1>
+        <p>Learn math with fun!</p>
+      </div>
+
+      <div class="toggle-buttons">
+        <button class="toggle-btn active" id="loginToggle">Login</button>
+        <button class="toggle-btn" id="signupToggle">Sign Up</button>
+      </div>
+
+      <div class="form active" id="loginForm">
+        <form id="loginFormElement">
+          <div class="input-group">
+            <input type="text" id="loginEmail" required>
+            <label>Email or Username</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="loginPassword" required>
+            <label>Password</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">Remember me</label>
+          </div>
+          <button type="submit" class="submit-btn">Login 🚀</button>
+          <div class="switch-link">
+            <p>Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form" id="signupForm">
+        <form id="signupFormElement">
+          <div class="input-group">
+            <input type="text" id="signupName" required>
+            <label>Full Name</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="signupEmail" required>
+            <label>Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="signupPassword" required>
+            <label>Password</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="signupConfirmPassword" required>
+            <label>Confirm Password</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="agreeTerms">
+            <label for="agreeTerms">I agree to the terms & conditions</label>
+          </div>
+          <button type="submit" class="submit-btn">Sign Up 🌟</button>
+          <div class="switch-link">
+            <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="back-home">
+        <a href="index.html">← Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

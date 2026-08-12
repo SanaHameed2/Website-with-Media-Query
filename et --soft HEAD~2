@@ -1,0 +1,25 @@
+[33me18bb3d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m feat: Add login
+[33m458b264[m feat: Add animated login/signup modal for Mathlings website
+[33m0b9a889[m fix: update stories page class names to match CSS styles
+[33m8a3e81f[m add new pages
+[33m60d8d8b[m changes in html
+[33m7041904[m git commit -m "feat: add Games, Videos, Stories pages with unified styling and responsive design"
+[33m96ad811[m videos.html add
+[33m1acf1a5[m add new page
+[33m778b8eb[m fix: Earth section overflow issues on mobile devices
+[33mfb1f4aa[m style: add complete CSS with hero video add
+[33m4a17a6b[m feat: add MP4 video to hero section with reduced size
+[33mfce685f[m git add index.html style.css git commit -m "feat: Earth Day section - Add Lottie animation with 1px green stroke - Add floating leaf animations - Update typography (3rem heading, 1.2rem text) - Remove gradient wrapper, use simple border"
+[33mc4dfc0d[m add earth section
+[33m10a63be[m add sections
+[33mea27b7d[m feat: add Fredoka One font pairing with Graphie for playful kids design
+[33mecdd548[m feat: build Mathlings kids math learning website with responsive design and Graphie fonts
+[33md15da95[m Remove duplicate files from subfolder after moving to root
+[33mbb1dc0c[m Merge: Combine existing repo with Mathlings website files
+[33m94f8c3c[m Initial commit - Mathlings website
+[33m57b771c[m Update index.html
+[33m06a403f[m changes made
+[33mbfd437b[m changes made in html and style.css
+[33m10d86e2[m Update index.html
+[33mcba5650[m Update style.css
+[33me9de818[m initial commit
