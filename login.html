@@ -2,79 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Login | Mathlings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="login.css">
 </head>
-<body>
-  <div class="container">
-    <div class="login-card">
-      <div class="logo">
-        <h1>Mathlings</h1>
-        <p>Learn math with fun!</p>
-      </div>
+<body class="login-page">
+  <a href="#main" class="skip-link">Skip to form</a>
 
-      <div class="toggle-buttons">
-        <button class="toggle-btn active" id="loginToggle">Login</button>
-        <button class="toggle-btn" id="signupToggle">Sign Up</button>
-      </div>
-
-      <div class="form active" id="loginForm">
-        <form id="loginFormElement">
-          <div class="input-group">
-            <input type="text" id="loginEmail" required>
-            <label>Email or Username</label>
-          </div>
-          <div class="input-group">
-            <input type="password" id="loginPassword" required>
-            <label>Password</label>
-          </div>
-          <div class="checkbox-group">
-            <input type="checkbox" id="rememberMe">
-            <label for="rememberMe">Remember me</label>
-          </div>
-          <button type="submit" class="submit-btn">Login 🚀</button>
-          <div class="switch-link">
-            <p>Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
-          </div>
-        </form>
-      </div>
-
-      <div class="form" id="signupForm">
-        <form id="signupFormElement">
-          <div class="input-group">
-            <input type="text" id="signupName" required>
-            <label>Full Name</label>
-          </div>
-          <div class="input-group">
-            <input type="email" id="signupEmail" required>
-            <label>Email</label>
-          </div>
-          <div class="input-group">
-            <input type="password" id="signupPassword" required>
-            <label>Password</label>
-          </div>
-          <div class="input-group">
-            <input type="password" id="signupConfirmPassword" required>
-            <label>Confirm Password</label>
-          </div>
-          <div class="checkbox-group">
-            <input type="checkbox" id="agreeTerms">
-            <label for="agreeTerms">I agree to the terms & conditions</label>
-          </div>
-          <button type="submit" class="submit-btn">Sign Up 🌟</button>
-          <div class="switch-link">
-            <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
-          </div>
-        </form>
-      </div>
-
-      <div class="back-home">
-        <a href="index.html">← Back to Home</a>
-      </div>
-    </div>
+  <!-- Decorative background shapes -->
+  <div class="login-bg" aria-hidden="true">
+    <div class="login-bg__shape login-bg__shape--star"></div>
+    <div class="login-bg__shape login-bg__shape--circle"></div>
+    <div class="login-bg__shape login-bg__shape--dots"></div>
+    <div class="login-bg__shape login-bg__shape--plus">➕</div>
+    <div class="login-bg__shape login-bg__shape--equal">=</div>
   </div>
 
-  <script src="login.js"></script>
+  <main class="login-main" id="main">
+    <div class="login-card">
+      <!-- Brand -->
+      <div class="login-brand">
+        <a href="index.html" class="login-brand__logo">
+          <span class="login-brand__icon" aria-hidden="true">🦊</span>
+          <span>Mathlings</span>
+        </a>
+        <p class="login-brand__tagline">Learn math with fun!</p>
+      </div>
+
+      <!-- Toggle -->
+      <div class="login-toggle" role="tablist" aria-label="Login or Sign Up">
+        <button
+          class="login-toggle__btn is-active"
+          id="loginToggle"
+          role="tab"
+          aria-selected="true"
+          aria-controls="loginForm"
+          tabindex="0">
+          Login
+        </button>
+        <button
+          class="login-toggle__btn"
+          id="signupToggle"
+          role="tab"
+          aria-selected="false"
+          aria-controls="signupForm"
+          tabindex="-1">
+          Sign Up
+        </button>
+      </div>
+
+      <!-- Login Form -->
+      <div class="login-form is-active" id="loginForm" role="tabpanel" aria-labelledby="loginToggle">
+        <form id="loginFormElement" novalidate>
+          <div class="field">
+            <input type="text" id="loginEmail" class="field__input" placeholder=" " required autocomplete="username">
+            <label for="loginEmail" class="field__label">Email or Username</label>
+          </div>
+          <div class="field">
+            <input type="password" id="loginPassword" class="field__input" placeholder=" " required autocomplete="current-password">
+            <label for="loginPassword" class="field__label">Password</label>
+          </div>
+          <div class="field-row">
+            <label class="checkbox">
+              <input type="checkbox" id="rememberMe">
+              <span class="checkbox__box" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="checkbox__text">Remember me</span>
+            </label>
+            <a href="#" class="login-link login-link--small">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Login</button>
+          <p class="login-switch">
+            Don't have an account? <a href="#" class="login-link" id="switchToSignup">Sign Up</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="login-form" id="signupForm" role="tabpanel" aria-labelledby="signupToggle" hidden>
+        <form id="signupFormElement" novalidate>
+          <div class="field">
+            <input type="text" id="signupName" class="field__input" placeholder=" " required autocomplete="name">
+            <label for="signupName" class="field__label">Full Name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="signupEmail" class="field__input" placeholder=" " required autocomplete="email">
+            <label for="signupEmail" class="field__label">Email</label>
+          </div>
+          <div class="field">
+            <input type="password" id="signupPassword" class="field__input" placeholder=" " required autocomplete="new-password">
+            <label for="signupPassword" class="field__label">Password</label>
+          </div>
+          <div class="field">
+            <input type="password" id="signupConfirmPassword" class="field__input" placeholder=" " required autocomplete="new-password">
+            <label for="signupConfirmPassword" class="field__label">Confirm Password</label>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" id="agreeTerms" required>
+            <span class="checkbox__box" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="checkbox__text">I agree to the <a href="#" class="login-link">terms & conditions</a></span>
+          </label>
+          <button type="submit" class="btn btn--primary btn--full">Sign Up</button>
+          <p class="login-switch">
+            Already have an account? <a href="#" class="login-link" id="switchToLogin">Login</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- Back link -->
+      <a href="index.html" class="login-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Home
+      </a>
+    </div>
+
+    <!-- Side illustration (desktop only) -->
+    <div class="login-illustration" aria-hidden="true">
+      <div class="login-illustration__card">
+        <span class="login-illustration__emoji">📚</span>
+        <span class="login-illustration__emoji">➕</span>
+        <span class="login-illustration__emoji">✨</span>
+        <span class="login-illustration__emoji">🔢</span>
+        <span class="login-illustration__emoji">🦊</span>
+        <span class="login-illustration__emoji">=</span>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      const loginToggle = document.getElementById('loginToggle');
+      const signupToggle = document.getElementById('signupToggle');
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+      const switchToSignup = document.getElementById('switchToSignup');
+      const switchToLogin = document.getElementById('switchToLogin');
+
+      function showLogin() {
+        loginToggle.classList.add('is-active');
+        loginToggle.setAttribute('aria-selected', 'true');
+        loginToggle.setAttribute('tabindex', '0');
+        signupToggle.classList.remove('is-active');
+        signupToggle.setAttribute('aria-selected', 'false');
+        signupToggle.setAttribute('tabindex', '-1');
+        loginForm.classList.add('is-active');
+        loginForm.hidden = false;
+        signupForm.classList.remove('is-active');
+        signupForm.hidden = true;
+        loginToggle.focus();
+      }
+
+      function showSignup() {
+        signupToggle.classList.add('is-active');
+        signupToggle.setAttribute('aria-selected', 'true');
+        signupToggle.setAttribute('tabindex', '0');
+        loginToggle.classList.remove('is-active');
+        loginToggle.setAttribute('aria-selected', 'false');
+        loginToggle.setAttribute('tabindex', '-1');
+        signupForm.classList.add('is-active');
+        signupForm.hidden = false;
+        loginForm.classList.remove('is-active');
+        loginForm.hidden = true;
+        signupToggle.focus();
+      }
+
+      loginToggle.addEventListener('click', showLogin);
+      signupToggle.addEventListener('click', showSignup);
+      switchToSignup.addEventListener('click', (e) => { e.preventDefault(); showSignup(); });
+      switchToLogin.addEventListener('click', (e) => { e.preventDefault(); showLogin(); });
+
+      // Simple validation feedback
+      document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const btn = form.querySelector('.btn--primary');
+          const original = btn.textContent;
+          btn.textContent = 'Welcome! 🎉';
+          btn.disabled = true;
+          setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
