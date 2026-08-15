@@ -1810,3 +1810,71 @@ p {
     height: 160px;
   }
 }
+/* ============================================
+   GAMES CTA SECTION (Character + Button)
+   ============================================ */
+
+.games-cta {
+  position: relative;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #fef9c3 0%, #fef3c7 100%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.games-cta__content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.games-cta__icon {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1.5rem;
+  filter: drop-shadow(0 18px 16px rgba(30, 41, 59, 0.18));
+  transition: var(--transition);
+}
+
+.games-cta__icon:hover {
+  transform: translateY(-8px) rotate(3deg);
+}
+
+.games-cta h2 {
+  max-width: 650px;
+  margin: 0 0 0.75rem;
+  color: var(--ml-text);
+}
+
+.games-cta p {
+  max-width: 520px;
+  margin: 0 0 2rem;
+  color: var(--ml-text-secondary);
+}
+
+.games-cta .btn {
+  position: relative;
+  z-index: 3;
+}
+
+
+/* ============================================
+   MOBILE RESPONSIVE FOR GAMES CTA
+   ============================================ */
+
+@media (max-width: 768px) {
+  .games-cta {
+    padding: 4rem 1.25rem;
+  }
+  .games-cta__icon {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1rem;
+  }
+}
