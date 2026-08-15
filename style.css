@@ -218,7 +218,6 @@ p {
 
 
 /* YELLOW CHARACTER BUTTON */
-
 .btn--primary {
   background:
     linear-gradient(
@@ -232,7 +231,6 @@ p {
 
 
 /* BLUE CHARACTER BUTTON */
-
 .btn--blue {
   background:
     linear-gradient(
@@ -246,7 +244,6 @@ p {
 
 
 /* GHOST */
-
 .btn--ghost {
   background: white;
   color: var(--ml-navy);
@@ -361,7 +358,7 @@ p {
    HERO — MATHLINGS WORLD
    ============================================ */
 
-.hero {
+.hero, .hero-container {
   position: relative;
 
   min-height: 680px;
@@ -383,8 +380,7 @@ p {
 
 
 /* SKY CLOUDS */
-
-.hero::before {
+.hero::before, .hero-container::before {
   content: "";
 
   position: absolute;
@@ -415,8 +411,7 @@ p {
 
 
 /* FLOATING NUMBER WORLD */
-
-.hero::after {
+.hero::after, .hero-container::after {
   content: "＋  ×  2  3  5  ✦";
 
   position: absolute;
@@ -443,7 +438,7 @@ p {
 }
 
 
-.hero__container {
+.hero__container, .hero-container {
   width: min(1200px, 100%);
 
   margin: auto;
@@ -463,17 +458,17 @@ p {
 }
 
 
-.hero__text {
+.hero__text, .hero-text {
   position: relative;
 }
 
 
-.hero__text h1 {
+.hero__text h1, .hero-text h1 {
   margin-bottom: 24px;
 }
 
 
-.hero__text .highlight {
+.hero__text .highlight, .hero-text .highlight {
   color: var(--ml-orange);
 
   text-shadow:
@@ -481,14 +476,14 @@ p {
 }
 
 
-.hero__text p {
+.hero__text p, .hero-text p {
   max-width: 560px;
 
   font-size: 1.1rem;
 }
 
 
-.hero__actions {
+.hero__actions, .hero-buttons {
   display: flex;
   flex-wrap: wrap;
 
@@ -498,9 +493,50 @@ p {
 }
 
 
-/* CHARACTER VISUAL */
+.hero-start {
+  /* Inherits from .btn--primary */
+  background:
+    linear-gradient(
+      180deg,
+      var(--ml-yellow-bright),
+      var(--ml-yellow)
+    );
 
-.hero__visual {
+  color: var(--ml-navy);
+  border: var(--outline);
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  min-height: 52px;
+  padding: 14px 28px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 var(--ml-navy);
+  transition: var(--transition);
+}
+.hero-start:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 0 var(--ml-navy);
+}
+
+.hero-demo {
+  background: white;
+  color: var(--ml-navy);
+  border: var(--outline);
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  min-height: 52px;
+  padding: 14px 28px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 var(--ml-navy);
+  transition: var(--transition);
+}
+.hero-demo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 0 var(--ml-navy);
+}
+
+
+/* CHARACTER VISUAL */
+.hero__visual, .hero-image {
   position: relative;
 
   display: flex;
@@ -509,7 +545,7 @@ p {
 }
 
 
-.hero__visual::before {
+.hero__visual::before, .hero-image::before {
   content: "";
 
   position: absolute;
@@ -531,7 +567,7 @@ p {
 }
 
 
-.hero__visual img {
+.hero__visual img, .hero-image img {
   position: relative;
 
   z-index: 2;
@@ -573,7 +609,7 @@ p {
    WORLD SECTION
    ============================================ */
 
-.section {
+.section, .cards-section {
   position: relative;
 
   padding:
@@ -581,7 +617,7 @@ p {
 }
 
 
-.section::before {
+.section::before, .cards-section::before {
   content: "";
 
   position: absolute;
@@ -608,7 +644,7 @@ p {
 }
 
 
-.section-header {
+.section-header, .section-title {
   max-width: 700px;
 
   margin:
@@ -618,7 +654,7 @@ p {
 }
 
 
-.section-header h2 {
+.section-header h2, .section-title h2 {
   margin-bottom: 16px;
 }
 
@@ -740,105 +776,8 @@ p {
 
 
 /* ============================================
-   GENERIC CARDS → ILLUSTRATED TILES
+   GAMES GRID — CARDS WITH ICONS
    ============================================ */
-
-.card {
-  position: relative;
-
-  overflow: hidden;
-
-  padding: 30px;
-
-  background:
-    linear-gradient(
-      145deg,
-      white,
-      #f9fdff
-    );
-
-  border:
-    3px solid
-    rgba(9,40,61,.08);
-
-  border-radius:
-    var(--radius-lg);
-
-  box-shadow:
-    var(--shadow-md);
-
-  transition:
-    var(--transition);
-}
-
-
-.card::after {
-  content: "";
-
-  position: absolute;
-
-  width: 130px;
-  height: 130px;
-
-  right: -50px;
-  bottom: -50px;
-
-  border-radius: 50%;
-
-  background:
-    rgba(223,255,0,.22);
-}
-
-
-.card:hover {
-  transform:
-    translateY(-8px);
-
-  box-shadow:
-    var(--shadow-lg);
-}
-
-
-/* ============================================
-   GAMES SECTION
-   ============================================ */
-
-.cards-section {
-  position: relative;
-
-  padding:
-    100px 5vw;
-
-  background:
-    linear-gradient(
-      180deg,
-      #f5ffd7,
-      #effaff
-    );
-}
-
-
-.cards-section::before {
-  content: "➕  ✦  3  ✕  7  ✦  =";
-
-  position: absolute;
-
-  top: 35px;
-  left: 0;
-
-  width: 100%;
-
-  display: flex;
-  justify-content: space-around;
-
-  color:
-    rgba(22,135,232,.16);
-
-  font-size: 2rem;
-
-  font-weight: 800;
-}
-
 
 .games-grid {
   position: relative;
@@ -893,6 +832,7 @@ p {
 }
 
 
+/* ICON / EMOJI AREA */
 .game-icon {
   width: 82px;
   height: 82px;
@@ -950,6 +890,50 @@ p {
 }
 
 
+/* TEXT CONTENT */
+.game-info {
+  margin-bottom: 16px;
+}
+
+.game-info h3 {
+  margin-bottom: 6px;
+}
+
+.game-info p {
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+
+/* HIDE adult metrics (stars / plays) */
+.game-rating,
+.stars,
+.plays {
+  display: none !important;
+}
+
+
+/* CATEGORY TAG (pill) */
+.category-tag {
+  display: inline-block;
+
+  padding: 6px 16px;
+
+  border-radius: var(--radius-full);
+
+  background: rgba(9, 40, 61, 0.06);
+
+  color: var(--ml-navy);
+
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+
+/* PLAY NOW BUTTON */
 .play-game-btn {
   width: 100%;
 
@@ -987,6 +971,102 @@ p {
 .play-game-btn:hover {
   transform:
     translateY(-3px);
+}
+
+
+/* ============================================
+   NEWSLETTER SECTION
+   ============================================ */
+
+.newsletter-section {
+  position: relative;
+
+  padding:
+    100px 5vw;
+
+  background:
+    linear-gradient(
+      180deg,
+      #effaff,
+      #f5ffd7
+    );
+}
+
+.newsletter-section::before {
+  content: "✉  🫧  1  2  ✦  🫧";
+
+  position: absolute;
+
+  top: 30px;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+
+  color:
+    rgba(22,135,232,.12);
+
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  pointer-events: none;
+}
+
+.newsletter-container {
+  position: relative;
+
+  max-width: 600px;
+
+  margin: auto;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+.newsletter-content h3 {
+  margin-bottom: 12px;
+}
+
+.newsletter-content p {
+  margin-bottom: 32px;
+}
+
+.newsletter-form {
+  display: flex;
+
+  gap: 14px;
+
+  max-width: 480px;
+
+  margin: auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+
+  padding: 14px 20px;
+
+  border: var(--outline);
+
+  border-radius: var(--radius-full);
+
+  font-family: inherit;
+
+  font-size: 1rem;
+
+  background: white;
+
+  box-shadow:
+    0 4px 0 rgba(9,40,61,.12);
+}
+
+.newsletter-form input:focus-visible {
+  outline: 4px solid var(--ml-orange);
+  outline-offset: 2px;
 }
 
 
@@ -1080,26 +1160,26 @@ p {
 
 @media (max-width: 900px) {
 
-  .hero__container {
+  .hero__container, .hero-container {
     grid-template-columns:
       1fr;
 
     text-align: center;
   }
 
-  .hero__text p {
+  .hero__text p, .hero-text p {
     margin-inline: auto;
   }
 
-  .hero__actions {
+  .hero__actions, .hero-buttons {
     justify-content: center;
   }
 
-  .hero__visual {
+  .hero__visual, .hero-image {
     order: -1;
   }
 
-  .hero {
+  .hero, .hero-container {
     min-height: auto;
 
     padding:
@@ -1121,12 +1201,7 @@ p {
     display: none;
   }
 
-  .section {
-    padding:
-      80px 20px;
-  }
-
-  .cards-section {
+  .section, .cards-section {
     padding:
       80px 20px;
   }
@@ -1149,6 +1224,15 @@ p {
       1fr;
   }
 
+  .newsletter-section {
+    padding:
+      80px 20px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
 }
 
 
@@ -1159,11 +1243,12 @@ p {
       clamp(2.5rem, 14vw, 4rem);
   }
 
-  .hero__actions {
+  .hero__actions, .hero-buttons {
     flex-direction: column;
   }
 
-  .hero__actions .btn {
+  .hero__actions .btn, .hero-buttons .btn,
+  .hero-start, .hero-demo {
     width: 100%;
   }
 
@@ -1201,4 +1286,527 @@ p {
       auto !important;
   }
 
+}
+/* ============================================
+   GAMES STORY SECTION (Newly Added)
+   ============================================ */
+
+.games-story-section {
+  padding: var(--space-20) 5vw;
+  background: var(--ml-surface);
+}
+
+.games-story-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.games-story-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.games-story-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.games-story-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.games-story-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  filter: drop-shadow(0 12px 0 rgba(9,40,61,0.1));
+}
+
+
+/* ============================================
+   JOURNEY STEPS (1, 2, 3)
+   ============================================ */
+
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.journey-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--ml-surface);
+  border: var(--outline);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.journey-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.journey-number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--ml-yellow);
+  border: var(--outline);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--ml-navy);
+  box-shadow: 0 4px 0 var(--ml-navy);
+}
+
+
+/* ============================================
+   BADGE COLORS (Green, Blue, Orange, Purple)
+   ============================================ */
+
+.badge--green {
+  background: var(--ml-green-light);
+  color: var(--ml-green-dark);
+  border: 2px solid var(--ml-green-dark);
+}
+
+.badge--blue {
+  background: var(--ml-blue-light);
+  color: var(--ml-blue-dark);
+  border: 2px solid var(--ml-blue-dark);
+}
+
+.badge--orange {
+  background: var(--ml-orange-light);
+  color: var(--ml-orange-dark);
+  border: 2px solid var(--ml-orange-dark);
+}
+
+.badge--purple {
+  background: #ede9fe;
+  color: #7c3aed;
+  border: 2px solid #7c3aed;
+}
+
+
+/* ============================================
+   RESPONSIVE MOBILE (Fixes screenshot issues)
+   ============================================ */
+
+@media (max-width: 900px) {
+  .games-story-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .games-story-image {
+    order: -1;
+  }
+  .games-story-image img {
+    max-width: 280px;
+  }
+  .journey-step {
+    text-align: left;
+    padding: 1rem;
+  }
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ============================================
+   FEATURED ADVENTURE
+   ============================================ */
+
+.featured-adventure {
+  padding: 5rem 2rem;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(250, 204, 21, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+  overflow: hidden;
+}
+
+.featured-adventure__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 480px;
+  background: var(--ml-surface);
+  border-radius: var(--radius-xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), var(--shadow-3d);
+  position: relative;
+}
+
+/* LEFT CONTENT */
+.featured-adventure__content {
+  padding: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.featured-adventure__content h2 {
+  margin: 1rem 0;
+  max-width: 520px;
+}
+
+.featured-adventure__content p {
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+/* RIGHT IMAGE */
+.featured-adventure__image {
+  height: 100%;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fef9c3 0%, #fde68a 100%);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.featured-adventure__image img {
+  max-width: 100%;
+  max-height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+}
+
+
+/* ============================================
+   RESPONSIVE (Mobile Fix for Featured Adventure)
+   ============================================ */
+
+@media (max-width: 900px) {
+  .featured-adventure__container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .featured-adventure__image {
+    min-height: 300px;
+    padding: 1.5rem;
+    order: -1;
+  }
+
+  .featured-adventure__content {
+    padding: 2rem 1.5rem 3rem;
+    text-align: center;
+  }
+
+  .featured-adventure__content h2 {
+    max-width: 100%;
+    margin: 0.75rem auto;
+  }
+
+  .featured-adventure__content p {
+    max-width: 100%;
+  }
+}
+/* ============================================
+   MISSING BADGE COLORS
+   ============================================ */
+
+.badge--green {
+  background: #ecfdf5;
+  color: #059669;
+  border: 2px solid #059669;
+}
+
+.badge--blue {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.badge--orange {
+  background: #fff7ed;
+  color: #ea580c;
+  border: 2px solid #ea580c;
+}
+
+.badge--purple {
+  background: #f5f3ff;
+  color: #7c3aed;
+  border: 2px solid #7c3aed;
+}
+
+
+/* ============================================
+   GAMES SECTION & CARDS
+   ============================================ */
+
+.games-section {
+  padding: 5rem 2rem;
+  background: var(--ml-bg);
+}
+
+.game-card {
+  background: var(--ml-surface);
+  border: var(--outline);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.game-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: var(--shadow-lg);
+}
+
+.game-card__image {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fef9c3, #fde68a);
+  padding: 1.5rem;
+}
+
+.game-card__image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.1));
+}
+
+.game-card__content {
+  padding: 1.5rem;
+}
+
+.game-card__content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.game-card__content p {
+  margin-bottom: 1rem;
+}
+
+
+/* ============================================
+   REWARDS SECTION (01 Play, 02 Learn, 03 Grow)
+   ============================================ */
+
+.rewards-section {
+  padding: 5rem 2rem;
+  background: var(--ml-surface);
+}
+
+.rewards-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.reward-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--ml-bg);
+  border-radius: var(--radius-lg);
+  border: var(--outline);
+  box-shadow: var(--shadow-lg), 0 10px 0 rgba(30, 41, 59, 0.07);
+  transition: var(--transition);
+}
+
+.reward-card:hover {
+  transform: translateY(-8px);
+}
+
+.reward-card__number {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ecfccb;
+  color: var(--ml-green-dark);
+  font-size: 1.1rem;
+  font-weight: 800;
+  box-shadow: 0 6px 0 rgba(5, 150, 105, 0.15);
+}
+
+.reward-card:nth-child(2) .reward-card__number {
+  background: #dbeafe;
+  color: var(--ml-blue-dark);
+  box-shadow: 0 6px 0 rgba(37, 99, 235, 0.15);
+}
+
+.reward-card:nth-child(3) .reward-card__number {
+  background: #fef3c7;
+  color: var(--ml-yellow-dark);
+  box-shadow: 0 6px 0 rgba(245, 158, 11, 0.15);
+}
+
+.reward-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.reward-card p {
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+
+/* ============================================
+   GAMES STORY SECTION
+   ============================================ */
+
+.games-story-section {
+  padding: 5rem 2rem;
+  background: var(--ml-surface);
+}
+
+.games-story-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.games-story-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.games-story-content p {
+  margin-bottom: 2rem;
+}
+
+.games-story-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.games-story-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  filter: drop-shadow(0 12px 0 rgba(9,40,61,0.1));
+}
+
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.journey-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--ml-surface);
+  border: var(--outline);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.journey-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.journey-number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--ml-yellow);
+  border: var(--outline);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--ml-navy);
+  box-shadow: 0 4px 0 var(--ml-navy);
+}
+
+
+/* ============================================
+   GAMES CTA BUTTON
+   ============================================ */
+
+.games-cta {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fef9c3, #fde68a);
+}
+
+
+/* ============================================
+   MOBILE RESPONSIVE (For all new sections)
+   ============================================ */
+
+@media (max-width: 768px) {
+  .rewards-section {
+    padding: 4rem 1rem;
+  }
+
+  .rewards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 450px;
+  }
+
+  .reward-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .games-story-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .games-story-image {
+    order: -1;
+  }
+
+  .games-story-image img {
+    max-width: 280px;
+  }
+
+  .journey-step {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .games-section {
+    padding: 4rem 1rem;
+  }
+
+  .game-card__image {
+    height: 160px;
+  }
 }
