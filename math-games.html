@@ -3,167 +3,815 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
   <title>Mathlings | Math Games</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- NAVBAR TOP -->
-  <nav class="navbar-top">
-    <div class="logo-container">
-      <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="logo-img">
-      <h1>Mathlings</h1>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <a href="index.html" class="navbar__logo">
+      <img
+        src="assets/images/mathlings-logo.webp"
+        alt="Mathlings"
+        style="height: 42px; width: auto;"
+      >
+    </a>
+
+    <ul class="navbar__links" id="mobileNav">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+
+      <li>
+        <a href="math-games.html" class="active">
+          Math Games
+        </a>
+      </li>
+
+      <li>
+        <a href="videos.html">Videos</a>
+      </li>
+
+      <li>
+        <a href="stories.html">Stories</a>
+      </li>
+    </ul>
+
+    <div class="navbar__actions">
+
+      <a
+        href="login.html"
+        class="btn btn--ghost btn--small"
+      >
+        Login
+      </a>
+
+      <a
+        href="login.html"
+        class="btn btn--blue btn--small"
+      >
+        Join Free
+      </a>
+
+      <button
+        class="navbar__toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+        id="navToggle"
+      >
+
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          aria-hidden="true"
+        >
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+
+      </button>
+
     </div>
-    <button class="login-btn" id="loginBtn">Login</button>
+
   </nav>
 
-  <!-- NAVBAR BOTTOM -->
-  <div class="navbar-bottom">
-    <div class="nav-links">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="math-games.html" class="active-nav">Math Games</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="stories.html">Stories</a></li>
-      </ul>
-    </div>
-    <div class="navbar-btn">
-      <button class="join-btn" id="joinBtn">Join Free</button>
-      <button class="learn-btn" id="learnMoreBtn">Learn More</button>
-    </div>
-  </div>
 
-  <!-- GAMES HERO SECTION -->
-  <section class="page-hero">
-    <div class="hero-blob"></div>
-    <div class="floating-circle circle-1"></div>
-    <div class="floating-circle circle-2"></div>
-    <div class="floating-circle circle-3"></div>
-    <div class="hero-container">
-      <div class="hero-text">
-        <h1>Fun <span class="highlight">Math Games</span></h1>
-        <p>Learn math through play with our interactive games. Battle monsters, solve puzzles, and become a math champion!</p>
-        <div class="hero-buttons">
-          <button class="hero-start" id="playNowBtn">Play Now</button>
-          <button class="hero-demo" id="learnMoreGamesBtn">Learn More</button>
-        </div>
-      </div>
-      <div class="hero-image">
-        <i class="fas fa-gamepad" style="font-size: 8rem; color: #facc15;"></i>
-      </div>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- GAMES GRID SECTION -->
-  <div class="cards-section">
-    <div class="section-title">
-      <h2>Choose Your <span class="highlight">Adventure</span></h2>
-      <p>Pick a game and start learning math the fun way!</p>
-    </div>
-    <div class="games-grid">
-      <div class="game-card">
-        <div class="game-icon">⚔️</div>
-        <div class="game-info">
-          <h3>Math Adventure Quest</h3>
-          <p>Solve math problems to unlock new levels and defeat monsters</p>
-          <div class="game-rating"><span class="stars">★★★★☆</span><span class="plays">🎮 1,234 plays</span></div>
-          <span class="category-tag">Addition</span>
-          <button class="play-game-btn" onclick="alert('Game coming soon! ⚔️')">Play Now →</button>
-        </div>
-      </div>
-      <div class="game-card">
-        <div class="game-icon">🎲</div>
-        <div class="game-info">
-          <h3>Number Bingo</h3>
-          <p>Match numbers and complete bingo patterns to win</p>
-          <div class="game-rating"><span class="stars">★★★★★</span><span class="plays">🎮 892 plays</span></div>
-          <span class="category-tag">Number Sense</span>
-          <button class="play-game-btn" onclick="alert('Game coming soon! 🎲')">Play Now →</button>
-        </div>
-      </div>
-      <div class="game-card">
-        <div class="game-icon">⚡</div>
-        <div class="game-info">
-          <h3>Multiplication Challenge</h3>
-          <p>Race against time to solve multiplication problems</p>
-          <div class="game-rating"><span class="stars">★★★★☆</span><span class="plays">🎮 2,156 plays</span></div>
-          <span class="category-tag">Multiplication</span>
-          <button class="play-game-btn" onclick="alert('Game coming soon! ⚡')">Play Now →</button>
-        </div>
-      </div>
-      <div class="game-card">
-        <div class="game-icon">🏃</div>
-        <div class="game-info">
-          <h3>Division Dash</h3>
-          <p>Quick division practice with exciting rewards</p>
-          <div class="game-rating"><span class="stars">★★★★☆</span><span class="plays">🎮 567 plays</span></div>
-          <span class="category-tag">Division</span>
-          <button class="play-game-btn" onclick="alert('Game coming soon! 🏃')">Play Now →</button>
-        </div>
-      </div>
-      <div class="game-card">
-        <div class="game-icon">🏭</div>
-        <div class="game-info">
-          <h3>Fraction Factory</h3>
-          <p>Build fractions and complete the factory orders</p>
-          <div class="game-rating"><span class="stars">★★★★★</span><span class="plays">🎮 1,890 plays</span></div>
-          <span class="category-tag">Fractions</span>
-          <button class="play-game-btn" onclick="alert('Game coming soon! 🏭')">Play Now →</button>
-        </div>
-      </div>
-      <div class="game-card">
-        <div class="game-icon">🔷</div>
-        <div class="game-info">
-          <h3>Geometry Puzzle</h3>
-          <p>Match shapes and learn about angles and symmetry</p>
-          <div class="game-rating"><span class="stars">★★★★☆</span><span class="plays">🎮 734 plays</span></div>
-          <span class="category-tag">Geometry</span>
-          <button class="play-game-btn" onclick="alert('Game coming soon! 🔷')">Play Now →</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- NEWSLETTER SECTION -->
-  <section class="newsletter-section">
-    <div class="newsletter-container">
-      <div class="newsletter-content">
-        <i class="fas fa-envelope-open-text"></i>
-        <h3>New Game Every Week!</h3>
-        <p>Get notified when we add new math games and features.</p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="Enter your email">
-          <button>Subscribe <i class="fas fa-arrow-right"></i></button>
+    <!-- HERO -->
+    <section class="hero games-hero">
+
+      <div class="hero__container">
+
+        <div class="hero__text">
+
+          <span class="badge badge--yellow">
+            Choose Your Adventure
+          </span>
+
+          <h1>
+            Every problem opens a
+            <span class="highlight">
+              new world
+            </span>
+          </h1>
+
+          <p>
+            Join the Mathlings on exciting adventures where numbers unlock
+            puzzles, challenges, treasures and new places to explore.
+          </p>
+
+          <div class="hero__actions">
+
+            <a
+              href="#games"
+              class="btn btn--primary"
+            >
+              Start Playing
+            </a>
+
+            <a
+              href="#how-it-works"
+              class="btn btn--ghost"
+            >
+              How it works
+            </a>
+
+          </div>
+
         </div>
+
+
+        <div class="hero__visual">
+
+          <img
+            src="assets/images/Game.webp"
+            alt="Mathlings game adventure"
+          >
+
+        </div>
+
       </div>
-    </div>
-  </section>
+
+    </section>
+
+
+    <!-- STORY INTRO -->
+    <section
+      id="how-it-works"
+      class="games-story-section"
+    >
+
+      <div class="games-story-container">
+
+        <div class="games-story-image">
+
+          <img
+            src="assets/images/Planet earth.webp"
+            alt="A Mathlings world to explore"
+          >
+
+        </div>
+
+
+        <div class="games-story-content">
+
+          <span class="badge badge--green">
+            Your Journey Begins
+          </span>
+
+          <h2>
+            Learn. Play.
+            <span class="highlight">
+              Discover.
+            </span>
+          </h2>
+
+          <p>
+            Every game is a little adventure. Solve a challenge,
+            unlock the next step and watch your math skills grow
+            along the way.
+          </p>
+
+
+          <div class="journey-steps">
+
+            <div class="journey-step">
+
+              <span class="journey-number">
+                1
+              </span>
+
+              <div>
+                <h3>Pick an adventure</h3>
+
+                <p>
+                  Choose the math skill you want to explore.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="journey-step">
+
+              <span class="journey-number">
+                2
+              </span>
+
+              <div>
+                <h3>Solve the challenge</h3>
+
+                <p>
+                  Play through puzzles, missions and fun activities.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="journey-step">
+
+              <span class="journey-number">
+                3
+              </span>
+
+              <div>
+                <h3>Unlock what's next</h3>
+
+                <p>
+                  Build confidence and keep moving through your journey.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GAME WORLD -->
+    <section
+      id="games"
+      class="games-section"
+    >
+
+      <div class="section-header">
+
+        <span class="badge badge--blue">
+          Explore the Worlds
+        </span>
+
+        <h2>
+          Where will your
+          <span class="highlight">
+            adventure
+          </span>
+          begin?
+        </h2>
+
+        <p class="body-text">
+          Each Mathlings world helps you practice a different skill.
+          Pick one and start exploring.
+        </p>
+
+      </div>
+
+
+      <div class="games-grid">
+
+
+        <!-- ADDITION -->
+        <article class="game-card game-card--yellow">
+
+          <div class="game-card__image">
+
+            <img
+              src="assets/images/Addition.webp"
+              alt="Addition adventure"
+            >
+
+            <span class="game-card__badge">
+              Beginner
+            </span>
+
+          </div>
+
+
+          <div class="game-card__content">
+
+            <span class="badge badge--yellow">
+              Addition
+            </span>
+
+            <h3>
+              The Number Garden
+            </h3>
+
+            <p>
+              Help the Mathlings collect numbers and solve addition
+              challenges along the way.
+            </p>
+
+            <a
+              href="login.html"
+              class="btn btn--primary btn--small"
+            >
+              Start Adventure
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- MULTIPLICATION -->
+        <article class="game-card game-card--blue">
+
+          <div class="game-card__image">
+
+            <img
+              src="assets/images/Multiplication.webp"
+              alt="Multiplication adventure"
+            >
+
+            <span class="game-card__badge">
+              Popular
+            </span>
+
+          </div>
+
+
+          <div class="game-card__content">
+
+            <span class="badge badge--blue">
+              Multiplication
+            </span>
+
+            <h3>
+              Times Table Quest
+            </h3>
+
+            <p>
+              Discover patterns, complete challenges and become a
+              multiplication master.
+            </p>
+
+            <a
+              href="login.html"
+              class="btn btn--blue btn--small"
+            >
+              Start Adventure
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- FRACTIONS -->
+        <article class="game-card game-card--orange">
+
+          <div class="game-card__image">
+
+            <img
+              src="assets/images/friction.webp"
+              alt="Fractions adventure"
+            >
+
+          </div>
+
+
+          <div class="game-card__content">
+
+            <span class="badge badge--orange">
+              Fractions
+            </span>
+
+            <h3>
+              The Fraction Forest
+            </h3>
+
+            <p>
+              Piece together clues and discover how parts create
+              a whole new world.
+            </p>
+
+            <a
+              href="login.html"
+              class="btn btn--primary btn--small"
+            >
+              Explore Now
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- GEOMETRY -->
+        <article class="game-card game-card--green">
+
+          <div class="game-card__image">
+
+            <img
+              src="assets/images/Geometry.webp"
+              alt="Geometry adventure"
+            >
+
+          </div>
+
+
+          <div class="game-card__content">
+
+            <span class="badge badge--green">
+              Geometry
+            </span>
+
+            <h3>
+              Shape Explorer
+            </h3>
+
+            <p>
+              Travel through a world of shapes, angles and surprising
+              geometric puzzles.
+            </p>
+
+            <a
+              href="login.html"
+              class="btn btn--primary btn--small"
+            >
+              Explore Now
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- LOGIC -->
+        <article class="game-card game-card--purple">
+
+          <div class="game-card__image">
+
+            <img
+              src="assets/images/Logic.webp"
+              alt="Logic puzzle adventure"
+            >
+
+          </div>
+
+
+          <div class="game-card__content">
+
+            <span class="badge badge--purple">
+              Logic
+            </span>
+
+            <h3>
+              Puzzle Island
+            </h3>
+
+            <p>
+              Follow clues, spot patterns and solve mysterious
+              challenges with clever thinking.
+            </p>
+
+            <a
+              href="login.html"
+              class="btn btn--blue btn--small"
+            >
+              Solve It
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- BONUS -->
+        <article class="game-card game-card--yellow">
+
+          <div class="game-card__image">
+
+            <img
+              src="assets/images/coin-cash.webp"
+              alt="Mathlings treasure challenge"
+            >
+
+          </div>
+
+
+          <div class="game-card__content">
+
+            <span class="badge badge--yellow">
+              Coming Soon
+            </span>
+
+            <h3>
+              Treasure of Numbers
+            </h3>
+
+            <p>
+              Collect clues, solve number puzzles and uncover hidden
+              Mathlings treasure.
+            </p>
+
+            <button
+              class="btn btn--ghost btn--small"
+              type="button"
+            >
+              Coming Soon
+            </button>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- BIG FEATURE -->
+    <section class="featured-adventure">
+
+      <div class="featured-adventure__container">
+
+
+        <div class="featured-adventure__content">
+
+          <span class="badge badge--yellow">
+            This Week's Adventure
+          </span>
+
+          <h2>
+            Ready for a
+            <span class="highlight">
+              number mission?
+            </span>
+          </h2>
+
+          <p>
+            The Mathlings need your help! Complete the challenges,
+            collect rewards and unlock the next part of the adventure.
+          </p>
+
+          <a
+            href="login.html"
+            class="btn btn--primary"
+          >
+            Begin the Mission
+          </a>
+
+        </div>
+
+
+        <div class="featured-adventure__image">
+
+          <img
+            src="assets/images/welcome.webp"
+            alt="Mathling ready for an adventure"
+          >
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- REWARD SECTION -->
+    <section class="rewards-section">
+
+      <div class="section-header">
+
+        <span class="badge badge--green">
+          Keep Exploring
+        </span>
+
+        <h2>
+          Every adventure has a
+          <span class="highlight">
+            reward
+          </span>
+        </h2>
+
+        <p class="body-text">
+          The more you explore, the more confident you become.
+        </p>
+
+      </div>
+
+
+      <div class="rewards-grid">
+
+
+        <div class="reward-card">
+
+          <div class="reward-card__number">
+            01
+          </div>
+
+          <h3>
+            Play
+          </h3>
+
+          <p>
+            Jump into a challenge and start exploring.
+          </p>
+
+        </div>
+
+
+        <div class="reward-card">
+
+          <div class="reward-card__number">
+            02
+          </div>
+
+          <h3>
+            Learn
+          </h3>
+
+          <p>
+            Practice skills naturally as you play.
+          </p>
+
+        </div>
+
+
+        <div class="reward-card">
+
+          <div class="reward-card__number">
+            03
+          </div>
+
+          <h3>
+            Grow
+          </h3>
+
+          <p>
+            Unlock new challenges as your confidence grows.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="games-cta">
+
+      <div class="games-cta__content">
+
+        <img
+          src="assets/images/mathlings-icon.webp"
+          alt=""
+          class="games-cta__icon"
+        >
+
+        <h2>
+          Your next adventure is waiting
+        </h2>
+
+        <p>
+          Join the Mathlings and make every number part of the story.
+        </p>
+
+        <a
+          href="login.html"
+          class="btn btn--blue"
+        >
+          Start Free
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="assets/images/mathlings-icon.png" alt="Mathlings Logo" class="footer-logo-img">
-        <span>Mathlings</span>
-      </div>
-      <div class="footer-links">
+
+    <a
+      href="index.html"
+      class="footer-brand"
+    >
+
+      <img
+        src="assets/images/mathlings-icon.webp"
+        alt="Mathlings"
+        style="height: 36px; width: auto;"
+      >
+
+      <span>
+        Mathlings
+      </span>
+
+    </a>
+
+
+    <ul class="footer__links">
+
+      <li>
         <a href="index.html">Home</a>
+      </li>
+
+      <li>
         <a href="math-games.html">Math Games</a>
+      </li>
+
+      <li>
         <a href="videos.html">Videos</a>
+      </li>
+
+      <li>
         <a href="stories.html">Stories</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-      </div>
-      <div class="copyright"><p>&copy; 2025 Mathlings. Making math fun for every child.</p></div>
-    </div>
+      </li>
+
+    </ul>
+
+
+    <p class="footer__copy">
+      &copy; 2025 Mathlings. Making math magical for every child.
+    </p>
+
   </footer>
 
+
   <script>
-    document.getElementById('loginBtn')?.addEventListener('click', () => location.href = 'login.html');
-    document.getElementById('joinBtn')?.addEventListener('click', () => location.href = 'login.html');
+
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if (navToggle && mobileNav) {
+
+      navToggle.addEventListener('click', () => {
+
+        const isOpen = mobileNav.classList.toggle('open');
+
+        navToggle.setAttribute(
+          'aria-expanded',
+          isOpen
+        );
+
+        navToggle.innerHTML = isOpen
+
+          ? `
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          `
+
+          : `
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          `;
+
+      });
+
+    }
+
   </script>
+
 </body>
 </html>

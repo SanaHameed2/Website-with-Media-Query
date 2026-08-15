@@ -7,390 +7,131 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-page">
+<body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <nav class="home-nav" aria-label="Main">
-    <div class="container home-nav__inner">
-      <a href="index.html" class="home-nav__logo">
-        <span class="home-nav__logo-icon" aria-hidden="true">🦊</span>
-        <span>Mathlings</span>
-      </a>
-      <ul class="home-nav__links" id="mobileNav">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="math-games.html">Math Games</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="stories.html">Stories</a></li>
-      </ul>
-      <div class="home-nav__actions">
-        <a href="login.html" class="btn btn--ghost btn--small">Login</a>
-        <a href="login.html" class="btn btn--blue btn--small">Join Free</a>
-        <button class="home-nav__mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" id="navToggle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-        </button>
-      </div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <!-- UPDATED: Using the horizontal logo -->
+      <img src="assets/images/logo-horizontal.webp" alt="Mathlings" style="height:36px; width:auto;">
+    </a>
+    <ul class="navbar__links" id="mobileNav">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="math-games.html">Math Games</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="stories.html">Stories</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--ghost btn--small">Login</a>
+      <a href="login.html" class="btn btn--blue btn--small">Join Free</a>
+      <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" id="navToggle">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
     </div>
   </nav>
 
   <main id="main">
+
     <!-- HERO -->
-    <section class="home-hero" aria-labelledby="hero-title">
-      <div class="home-hero__bg" aria-hidden="true"></div>
-      <div class="home-hero__decor home-hero__decor--star" aria-hidden="true">
-        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 2l6 14h16l-12 9 4 15-14-10-14 10 4-15-12-9h16z"/></svg>
-      </div>
-      <div class="home-hero__decor home-hero__decor--circle" aria-hidden="true"></div>
-      <div class="home-hero__decor home-hero__decor--dots" aria-hidden="true"></div>
-
-      <div class="container home-hero__container">
-        <div class="home-hero__text">
-          <span class="home-hero__badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            Adaptive Learning
-          </span>
-          <h1 id="hero-title" class="home-hero__title">Math that feels like <span class="highlight">adventure</span></h1>
-          <p class="home-hero__lead">Adaptive quests, cool battles & rewarding challenges — every step builds confidence.</p>
-          <div class="home-hero__actions">
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__text">
+          <span class="badge badge--yellow">Play & Learn</span>
+          <h1 id="hero-title">Math that feels like <span class="highlight">adventure</span></h1>
+          <p>Adaptive quests, cool battles & rewarding challenges — every step builds confidence.</p>
+          <div class="hero__actions">
             <a href="login.html" class="btn btn--primary">Start Free</a>
-            <a href="#featured" class="btn btn--secondary">See how it works</a>
+            <a href="#featured" class="btn btn--ghost">See how it works</a>
           </div>
         </div>
-        <div class="home-hero__visual">
-          <div class="home-hero__video-wrap">
-            <video autoplay loop muted playsinline class="home-hero__video" poster="assets/images/welcome.png">
-              <source src="assets/images/animation.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTRO -->
-    <section class="section home-intro" aria-labelledby="intro-title">
-      <div class="container">
-        <div class="home-intro__card">
-          <span class="badge badge--yellow">Adaptive Learning</span>
-          <h2 id="intro-title" class="home-intro__title">Welcome to Mathlings</h2>
-          <p class="home-intro__text">Students answer adaptive math questions to win battles, complete quests, and unlock rewards. Every journey is personalized to make math joyful and effective.</p>
-          <div class="home-intro__stats">
-            <div class="home-intro__stat"><strong>500k+</strong><span>Happy learners</span></div>
-            <div class="home-intro__stat"><strong>98%</strong><span>Skill growth</span></div>
-            <div class="home-intro__stat"><strong>1,200+</strong><span>Math challenges</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURED GAME -->
-    <section class="section featured-game" id="featured" aria-labelledby="featured-title">
-      <div class="container">
-        <div class="featured-game__card">
-          <div class="featured-game__content">
-            <span class="badge badge--yellow featured-game__badge">Game of the Week</span>
-            <h2 id="featured-title" class="featured-game__title">Number Ninjas Challenge</h2>
-            <p class="featured-game__text">Beat the clock with exciting addition & subtraction challenges! Help the Ninjas collect stars while mastering basic math facts. Can you reach black belt level?</p>
-            <div class="featured-game__actions">
-              <a href="#" class="btn btn--blue">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Play Now
-              </a>
-            </div>
-          </div>
-          <div class="featured-game__cover">
-            <div class="featured-game__cover-inner">
-              <img src="assets/images/Number Ninjas.png" alt="Number Ninjas game illustration">
-            </div>
-          </div>
+        <div class="hero__visual">
+          <img src="assets/images/welcome.webp" alt="Welcome Mathling Character">
         </div>
       </div>
     </section>
 
     <!-- TOPICS -->
-    <section class="section" aria-labelledby="topics-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="topics-title">Explore by <span style="color: var(--ml-brand-dark);">Math Topic</span></h2>
-          <p class="body-text">Find the perfect game for your child's learning level</p>
-        </div>
-        <div class="topic-grid">
-          <article class="topic-card topic-card--addition" tabindex="0" role="button" aria-label="Addition, build basic addition skills">
-            <div class="topic-card__icon" aria-hidden="true">➕</div>
-            <h3 class="topic-card__title">Addition</h3>
-            <p class="topic-card__desc">Build basic addition skills</p>
-          </article>
-          <article class="topic-card topic-card--multiplication" tabindex="0" role="button" aria-label="Multiplication, master times tables">
-            <div class="topic-card__icon" aria-hidden="true">✖️</div>
-            <h3 class="topic-card__title">Multiplication</h3>
-            <p class="topic-card__desc">Master times tables</p>
-          </article>
-          <article class="topic-card topic-card--fractions" tabindex="0" role="button" aria-label="Fractions, understand parts and wholes">
-            <div class="topic-card__icon" aria-hidden="true">🍕</div>
-            <h3 class="topic-card__title">Fractions</h3>
-            <p class="topic-card__desc">Understand parts & wholes</p>
-          </article>
-          <article class="topic-card topic-card--geometry" tabindex="0" role="button" aria-label="Geometry, explore shapes and angles">
-            <div class="topic-card__icon" aria-hidden="true">🔷</div>
-            <h3 class="topic-card__title">Geometry</h3>
-            <p class="topic-card__desc">Explore shapes & angles</p>
-          </article>
-          <article class="topic-card topic-card--logic" tabindex="0" role="button" aria-label="Logic, solve puzzles and think">
-            <div class="topic-card__icon" aria-hidden="true">🧠</div>
-            <h3 class="topic-card__title">Logic</h3>
-            <p class="topic-card__desc">Solve puzzles & think</p>
-          </article>
-        </div>
+    <section style="padding: 3rem 0; text-align: center;">
+      <h2 style="margin-bottom: 2rem;">Explore by <span style="color: var(--ml-yellow-dark);">Math Topic</span></h2>
+      <div class="topic-grid">
+        <div class="topic-item"><img src="assets/images/Addition.webp" alt="Addition"><h3>Addition</h3><p>Basic skills</p></div>
+        <div class="topic-item"><img src="assets/images/Multiplication.webp" alt="Multiplication"><h3>Multiplication</h3><p>Times tables</p></div>
+        <div class="topic-item"><img src="assets/images/friction.webp" alt="Fractions"><h3>Fractions</h3><p>Parts & wholes</p></div>
+        <div class="topic-item"><img src="assets/images/Geometry.webp" alt="Geometry"><h3>Geometry</h3><p>Shapes & angles</p></div>
+        <div class="topic-item"><img src="assets/images/Logic.webp" alt="Logic"><h3>Logic</h3><p>Solve puzzles</p></div>
       </div>
     </section>
 
-    <!-- TRENDING -->
-    <section class="section trending-games" aria-labelledby="trending-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="trending-title">Trending <span style="color: var(--ml-brand-dark);">This Week</span></h2>
-          <p class="body-text">Most played by our little mathematicians</p>
+    <!-- FEATURED GAME -->
+    <section id="featured" style="padding: 2rem;">
+      <div style="max-width: 1000px; margin: 0 auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg), var(--shadow-3d); overflow: hidden; background: var(--ml-surface); display: flex; flex-wrap: wrap;">
+        <div style="flex: 1; padding: 3rem; min-width: 300px;">
+          <span class="badge badge--yellow" style="margin-bottom: var(--space-4);">Game of the Week</span>
+          <h2 style="margin-top: 0.5rem;">Number Ninjas</h2>
+          <p style="margin: 1rem 0;">Beat the clock with exciting addition & subtraction challenges!</p>
+          <a href="#" class="btn btn--primary">Play Now</a>
         </div>
-        <div class="trending-games__scroll" role="region" aria-label="Trending games carousel" tabindex="0">
-          <article class="trending-card">
-            <div class="trending-card__cover">
-              <span class="badge badge--green trending-card__badge">Top Pick</span>
-              <span class="trending-card__icon" aria-hidden="true">⚔️</span>
-            </div>
-            <div class="trending-card__body">
-              <h3 class="trending-card__title">Number Ninjas</h3>
-              <p class="trending-card__text">Beat the clock with addition challenges!</p>
-              <a href="#" class="btn btn--blue btn--small trending-card__btn">Play Now</a>
-            </div>
-          </article>
-          <article class="trending-card">
-            <div class="trending-card__cover">
-              <span class="badge badge--orange trending-card__badge">Popular</span>
-              <span class="trending-card__icon" aria-hidden="true">⚡</span>
-            </div>
-            <div class="trending-card__body">
-              <h3 class="trending-card__title">Multiplication Masters</h3>
-              <p class="trending-card__text">Race against time to multiply!</p>
-              <a href="#" class="btn btn--blue btn--small trending-card__btn">Play Now</a>
-            </div>
-          </article>
-          <article class="trending-card">
-            <div class="trending-card__cover">
-              <span class="badge badge--orange trending-card__badge">Popular</span>
-              <span class="trending-card__icon" aria-hidden="true">🏭</span>
-            </div>
-            <div class="trending-card__body">
-              <h3 class="trending-card__title">Fraction Fables</h3>
-              <p class="trending-card__text">Visual stories that explain fractions!</p>
-              <a href="#" class="btn btn--blue btn--small trending-card__btn">Play Now</a>
-            </div>
-          </article>
-          <article class="trending-card">
-            <div class="trending-card__cover">
-              <span class="badge badge--orange trending-card__badge">Popular</span>
-              <span class="trending-card__icon" aria-hidden="true">🔷</span>
-            </div>
-            <div class="trending-card__body">
-              <h3 class="trending-card__title">Shape Explorers</h3>
-              <p class="trending-card__text">Discover geometry through puzzles!</p>
-              <a href="#" class="btn btn--blue btn--small trending-card__btn">Play Now</a>
-            </div>
-          </article>
-          <article class="trending-card">
-            <div class="trending-card__cover">
-              <span class="badge badge--orange trending-card__badge">Popular</span>
-              <span class="trending-card__icon" aria-hidden="true">💰</span>
-            </div>
-            <div class="trending-card__body">
-              <h3 class="trending-card__title">Coin & Cash Quest</h3>
-              <p class="trending-card__text">Real-world money skills!</p>
-              <a href="#" class="btn btn--blue btn--small trending-card__btn">Play Now</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ALL GAMES -->
-    <section class="section all-games" aria-labelledby="all-games-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="all-games-title">All <span style="color: var(--ml-brand-dark);">Math Games</span></h2>
-          <p class="body-text">Discover our complete collection of fun math adventures</p>
-        </div>
-        <div class="game-filters" role="group" aria-label="Filter games by category">
-          <button class="filter-chip is-active" data-filter="all" aria-pressed="true"><span aria-hidden="true">🎮</span> All</button>
-          <button class="filter-chip" data-filter="addition" aria-pressed="false"><span aria-hidden="true">➕</span> Addition</button>
-          <button class="filter-chip" data-filter="multiplication" aria-pressed="false"><span aria-hidden="true">✖️</span> Multiplication</button>
-          <button class="filter-chip" data-filter="fractions" aria-pressed="false"><span aria-hidden="true">🍕</span> Fractions</button>
-          <button class="filter-chip" data-filter="geometry" aria-pressed="false"><span aria-hidden="true">🔷</span> Geometry</button>
-          <button class="filter-chip" data-filter="logic" aria-pressed="false"><span aria-hidden="true">🧠</span> Logic</button>
-        </div>
-        <div class="games-grid" id="gamesGrid">
-          <article class="game-card animate-in" data-category="addition">
-            <div class="game-card__cover"><img src="assets/images/Number Ninjas.png" alt="Number Ninjas game icon"></div>
-            <div class="game-card__body">
-              <h3 class="game-card__title">Number Ninjas</h3>
-              <p class="game-card__text">Beat the clock with addition & subtraction challenges.</p>
-              <div class="game-card__meta">
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 5 min</span>
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 6-8</span>
-              </div>
-            </div>
-            <div class="game-card__footer"><a href="#" class="btn btn--blue btn--small game-card__btn">Play now</a></div>
-          </article>
-
-          <article class="game-card animate-in" data-category="multiplication">
-            <div class="game-card__cover"><img src="assets/images/multiplication-master.png" alt="Multiplication Masters game icon"></div>
-            <div class="game-card__body">
-              <h3 class="game-card__title">Multiplication Masters</h3>
-              <p class="game-card__text">Fun puzzles that make times tables stick.</p>
-              <div class="game-card__meta">
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 8 min</span>
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 9-11</span>
-              </div>
-            </div>
-            <div class="game-card__footer"><a href="#" class="btn btn--blue btn--small game-card__btn">Play now</a></div>
-          </article>
-
-          <article class="game-card animate-in" data-category="fractions">
-            <div class="game-card__cover"><img src="assets/images/friction-fable.png" alt="Fraction Fables game icon"></div>
-            <div class="game-card__body">
-              <h3 class="game-card__title">Fraction Fables</h3>
-              <p class="game-card__text">Visual stories that explain parts & wholes.</p>
-              <div class="game-card__meta">
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 7 min</span>
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 9-11</span>
-              </div>
-            </div>
-            <div class="game-card__footer"><a href="#" class="btn btn--blue btn--small game-card__btn">Play now</a></div>
-          </article>
-
-          <article class="game-card animate-in" data-category="geometry">
-            <div class="game-card__cover"><img src="assets/images/shape.png" alt="Shape Explorers game icon"></div>
-            <div class="game-card__body">
-              <h3 class="game-card__title">Shape Explorers</h3>
-              <p class="game-card__text">Discover geometry through interactive puzzles.</p>
-              <div class="game-card__meta">
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 6 min</span>
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 6-8</span>
-              </div>
-            </div>
-            <div class="game-card__footer"><a href="#" class="btn btn--blue btn--small game-card__btn">Play now</a></div>
-          </article>
-
-          <article class="game-card animate-in" data-category="addition">
-            <div class="game-card__cover"><img src="assets/images/coin-cash.png" alt="Coin & Cash Quest game icon"></div>
-            <div class="game-card__body">
-              <h3 class="game-card__title">Coin & Cash Quest</h3>
-              <p class="game-card__text">Real-world money skills & mental math.</p>
-              <div class="game-card__meta">
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 8 min</span>
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 6-8</span>
-              </div>
-            </div>
-            <div class="game-card__footer"><a href="#" class="btn btn--blue btn--small game-card__btn">Play now</a></div>
-          </article>
-
-          <article class="game-card animate-in" data-category="logic">
-            <div class="game-card__cover"><img src="assets/images/brain-builder.png" alt="Brain Builders game icon"></div>
-            <div class="game-card__body">
-              <h3 class="game-card__title">Brain Builders</h3>
-              <p class="game-card__text">Logic puzzles & critical thinking challenges.</p>
-              <div class="game-card__meta">
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10 min</span>
-                <span class="game-card__meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Ages 12+</span>
-              </div>
-            </div>
-            <div class="game-card__footer"><a href="#" class="btn btn--blue btn--small game-card__btn">Play now</a></div>
-          </article>
+        <div style="flex: 1; background: #fef9c3; padding: 3rem; display: flex; align-items: center; justify-content: center; min-width: 300px;">
+          <img src="assets/images/Number Ninjas.png" alt="Game" style="max-width: 250px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.10));">
         </div>
       </div>
     </section>
 
     <!-- FEATURES -->
-    <section class="section features" aria-labelledby="features-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="features-title">Why kids love Mathlings</h2>
-          <p class="body-text">Designed to make every math moment magical</p>
-        </div>
-        <div class="features__grid">
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">🎮</div>
-            <h3 class="feature-card__title">Game-Based Learning</h3>
-            <p class="feature-card__text">Earn points, unlock achievements, and level up while mastering math skills.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">📊</div>
-            <h3 class="feature-card__title">Adaptive Path</h3>
-            <p class="feature-card__text">Questions adjust to each student's skill level for personalized growth.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">🏆</div>
-            <h3 class="feature-card__title">Rewards & Badges</h3>
-            <p class="feature-card__text">Celebrate milestones with digital rewards that keep motivation high.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">👨‍👩‍👧</div>
-            <h3 class="feature-card__title">Parent Dashboard</h3>
-            <p class="feature-card__text">Track progress and celebrate achievements together.</p>
-          </article>
-        </div>
+    <section style="padding: 3rem 2rem; text-align: center;">
+      <h2 style="margin-bottom: 2rem;">Why kids love Mathlings</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+        <div class="card"><div style="font-size: 2.5rem;">🎮</div><h3>Game-Based</h3><p>Learn by playing</p></div>
+        <div class="card"><div style="font-size: 2.5rem;">📊</div><h3>Adaptive Path</h3><p>Personalized growth</p></div>
+        <div class="card"><div style="font-size: 2.5rem;">🏆</div><h3>Rewards</h3><p>Stay motivated</p></div>
       </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="section testimonials" aria-labelledby="testimonials-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="testimonials-title">Trusted by <span style="color: var(--ml-brand-dark);">Families</span></h2>
-          <p class="body-text">See what parents and teachers are saying</p>
-        </div>
-        <div class="testimonials__grid">
-          <blockquote class="testimonial">
-            <span class="testimonial__quote" aria-hidden="true">"</span>
-            <p class="testimonial__text">My daughter went from struggling with fractions to actually enjoying them. Mathlings made math fun again!</p>
-            <footer class="testimonial__author">
-              <span class="testimonial__avatar" aria-hidden="true">👩</span>
-              <div><cite class="testimonial__name">Sarah Johnson</cite><p class="testimonial__role">Parent of 3rd grader</p></div>
-            </footer>
-          </blockquote>
-          <blockquote class="testimonial">
-            <span class="testimonial__quote" aria-hidden="true">"</span>
-            <p class="testimonial__text">As a teacher, I love how the platform adapts to each student's pace. The engagement is incredible.</p>
-            <footer class="testimonial__author">
-              <span class="testimonial__avatar" aria-hidden="true">👨‍🏫</span>
-              <div><cite class="testimonial__name">Mr. David Chen</cite><p class="testimonial__role">Elementary Teacher</p></div>
-            </footer>
-          </blockquote>
-          <blockquote class="testimonial">
-            <span class="testimonial__quote" aria-hidden="true">"</span>
-            <p class="testimonial__text">The quests and battles keep my son motivated. He asks to practice math now - that's a win!</p>
-            <footer class="testimonial__author">
-              <span class="testimonial__avatar" aria-hidden="true">👩‍👧</span>
-              <div><cite class="testimonial__name">Michelle Rodriguez</cite><p class="testimonial__role">Mom of 2</p></div>
-            </footer>
-          </blockquote>
-        </div>
+    <section style="padding: 3rem 2rem; text-align: center;">
+      <h2 style="margin-bottom: 2rem;">Trusted by <span style="color: var(--ml-yellow-dark);">Families</span></h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+        <blockquote style="background: var(--ml-bg); border-radius: var(--radius-lg); border: 1px solid rgba(0,0,0,0.02); padding: 2rem; box-shadow: var(--shadow-md);">
+          <p style="font-size: 1rem; line-height: 1.7; color: var(--ml-text); margin-bottom: 1rem;">"My daughter went from struggling with fractions to actually enjoying them. Mathlings made math fun again!"</p>
+          <footer style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: #f1f5f9; display: flex; align-items: center; justify-content: center;">👩</div>
+            <div><cite style="font-weight: 700; font-style: normal;">Sarah Johnson</cite><p style="font-size: 0.875rem; color: var(--ml-text-secondary); margin: 0;">Parent of 3rd grader</p></div>
+          </footer>
+        </blockquote>
+        <blockquote style="background: var(--ml-bg); border-radius: var(--radius-lg); border: 1px solid rgba(0,0,0,0.02); padding: 2rem; box-shadow: var(--shadow-md);">
+          <p style="font-size: 1rem; line-height: 1.7; color: var(--ml-text); margin-bottom: 1rem;">"As a teacher, I love how the platform adapts to each student's pace. The engagement is incredible."</p>
+          <footer style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: #f1f5f9; display: flex; align-items: center; justify-content: center;">👨‍🏫</div>
+            <div><cite style="font-weight: 700; font-style: normal;">Mr. David Chen</cite><p style="font-size: 0.875rem; color: var(--ml-text-secondary); margin: 0;">Elementary Teacher</p></div>
+          </footer>
+        </blockquote>
+        <blockquote style="background: var(--ml-bg); border-radius: var(--radius-lg); border: 1px solid rgba(0,0,0,0.02); padding: 2rem; box-shadow: var(--shadow-md);">
+          <p style="font-size: 1rem; line-height: 1.7; color: var(--ml-text); margin-bottom: 1rem;">"The quests and battles keep my son motivated. He asks to practice math now - that's a win!"</p>
+          <footer style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: #f1f5f9; display: flex; align-items: center; justify-content: center;">👩‍👧</div>
+            <div><cite style="font-weight: 700; font-style: normal;">Michelle Rodriguez</cite><p style="font-size: 0.875rem; color: var(--ml-text-secondary); margin: 0;">Mom of 2</p></div>
+          </footer>
+        </blockquote>
       </div>
     </section>
 
     <!-- NEWSLETTER -->
-    <section class="section newsletter" aria-labelledby="newsletter-title">
-      <div class="container newsletter__container">
-        <div class="newsletter__icon" aria-hidden="true">
+    <section style="padding: 3rem 2rem; background: #fef9c3; text-align: center;">
+      <div style="max-width: 600px; margin: 0 auto;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--ml-blue);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
-        <h2 id="newsletter-title" class="newsletter__title">New Game Every Week</h2>
-        <p class="newsletter__text">Get a free math game delivered to your inbox every Friday.</p>
-        <form class="newsletter__form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!';">
-          <label for="email" class="visually-hidden">Email address</label>
-          <input type="email" id="email" class="newsletter__input" placeholder="Enter your email" required>
+        <h2 style="margin-bottom: 0.5rem;">New Game Every Week</h2>
+        <p style="color: var(--ml-text-secondary); margin-bottom: 2rem;">Get a free math game delivered to your inbox every Friday.</p>
+        <form style="display: flex; gap: 1rem; max-width: 480px; margin: 0 auto; flex-wrap: wrap;" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!';">
+          <input type="email" placeholder="Enter your email" style="flex: 1; padding: 12px 20px; border-radius: var(--radius-full); border: 2px solid #e2e8f0; font-family: inherit; font-size: 1rem; min-width: 200px;" required>
           <button type="submit" class="btn btn--primary">Subscribe</button>
         </form>
       </div>
@@ -398,22 +139,18 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="home-footer">
-    <div class="container home-footer__inner">
-      <a href="index.html" class="home-footer__logo">
-        <span style="width:32px;height:32px;background:linear-gradient(135deg,var(--ml-brand),var(--ml-blue));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1rem;" aria-hidden="true">🦊</span>
-        <span>Mathlings</span>
-      </a>
-      <ul class="home-footer__links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="math-games.html">Math Games</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="stories.html">Stories</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Terms</a></li>
-      </ul>
-      <p class="home-footer__copy">&copy; 2025 Mathlings. Making math magical for every child.</p>
-    </div>
+  <footer class="footer">
+    <a href="index.html" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: white; font-weight: 700; font-size: 1.5rem; margin-bottom: 1rem;">
+      <img src="assets/images/mathlings-icon.webp" alt="Mathlings" style="height: 32px; width: auto;">
+      <span>Mathlings</span>
+    </a>
+    <ul class="footer__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="math-games.html">Math Games</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="stories.html">Stories</a></li>
+    </ul>
+    <p class="footer__copy">&copy; 2025 Mathlings. Making math magical for every child.</p>
   </footer>
 
   <script>
@@ -422,36 +159,13 @@
     const mobileNav = document.getElementById('mobileNav');
     if (navToggle && mobileNav) {
       navToggle.addEventListener('click', () => {
-        const isOpen = mobileNav.classList.toggle('is-open');
+        const isOpen = mobileNav.classList.toggle('open');
         navToggle.setAttribute('aria-expanded', isOpen);
         navToggle.innerHTML = isOpen
           ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
           : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
       });
     }
-
-    // Game filters
-    const filterChips = document.querySelectorAll('.filter-chip');
-    const gameCards = document.querySelectorAll('.game-card');
-    filterChips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        filterChips.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
-        chip.classList.add('is-active');
-        chip.setAttribute('aria-pressed', 'true');
-        const filter = chip.dataset.filter;
-        gameCards.forEach(card => {
-          const match = filter === 'all' || card.dataset.category === filter;
-          if (match) {
-            card.classList.remove('is-hidden');
-            card.style.display = 'flex';
-            requestAnimationFrame(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; });
-          } else {
-            card.style.opacity = '0'; card.style.transform = 'scale(0.95)';
-            setTimeout(() => { card.classList.add('is-hidden'); card.style.display = 'none'; }, 250);
-          }
-        });
-      });
-    });
   </script>
 </body>
 </html>
