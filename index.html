@@ -12,28 +12,30 @@
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR (Fixed with Logo + Text) -->
   <nav class="navbar">
-    <a href="index.html" class="navbar__logo">
-      <!-- Logo now controlled purely by CSS, no inline height -->
-      <img src="assets/images/logo-horizontal.webp" alt="Mathlings">
-    </a>
-    <ul class="navbar__links" id="mobileNav">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="math-games.html">Math Games</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="stories.html">Stories</a></li>
-    </ul>
-    <div class="navbar__actions">
-      <a href="login.html" class="btn btn--ghost btn--small">Login</a>
-      <a href="login.html" class="btn btn--blue btn--small">Join Free</a>
-      <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" id="navToggle">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/mathlings-icon.webp" alt="Mathlings">
+        <span>Mathlings</span>
+      </a>
+      <ul class="navbar__links" id="mobileNav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="math-games.html">Math Games</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="stories.html">Stories</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="login.html" class="btn btn--ghost btn--small">Login</a>
+        <a href="login.html" class="btn btn--blue btn--small">Join Free</a>
+        <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" id="navToggle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -41,7 +43,7 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div class="hero__container">
+      <div class="container hero__container">
         <div class="hero__text">
           <span class="badge badge--yellow">Play & Learn</span>
           <h1 id="hero-title">Math that feels like <span class="highlight">adventure</span></h1>

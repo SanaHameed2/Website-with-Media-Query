@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mathlings | Video Lessons</title>
 
-  <!-- IMPORTANT: Is file ko apne 'videos.css' se link karein -->
+  <!-- Style.css link (Home design system) -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Agar font nahi aa raha, toh backup font -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body class="videos-page">
 
   <!-- SKIP LINK -->
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- NAVIGATION -->
-  <nav class="videos-nav" aria-label="Primary navigation">
-    <div class="container videos-nav__inner">
-      <a href="#" class="videos-nav__logo">
-        <span class="videos-nav__logo-icon" aria-hidden="true">🧸</span>
-        Mathlings
+  <!-- NAVIGATION (Using home design classes) -->
+  <nav class="navbar videos-nav" aria-label="Primary navigation">
+    <div class="container navbar__inner videos-nav__inner">
+      <a href="index.html" class="navbar__logo videos-nav__logo">
+        <!-- Use your horizontal logo here -->
+        <img src="assets/images/mathlings-icon.webp" alt="Mathlings" style="height:36px; width:auto;">
       </a>
-      <ul class="videos-nav__links" role="list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#" aria-current="page">Videos</a></li>
-        <li><a href="#">Stories</a></li>
+      <ul class="navbar__links videos-nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="math-games.html">Math Games</a></li>
+        <li><a href="videos.html" aria-current="page">Videos</a></li>
+        <li><a href="stories.html">Stories</a></li>
       </ul>
-      <div class="videos-nav__actions">
-        <button class="btn btn--ghost">Login</button>
-        <button class="btn btn--primary">Join Free</button>
-        <button class="videos-nav__mobile-toggle" aria-label="Toggle menu">
+      <div class="navbar__actions videos-nav__actions">
+        <a href="login.html" class="btn btn--ghost btn--small">Login</a>
+        <a href="login.html" class="btn btn--primary btn--small">Join Free</a>
+        <button class="navbar__toggle videos-nav__mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -46,16 +43,11 @@
   <!-- MAIN CONTENT -->
   <main id="main">
 
-    <!-- HERO SECTION -->
-    <section class="videos-hero section" aria-labelledby="hero-title">
-      <div class="videos-hero__bg"></div>
-      <div class="videos-hero__decor videos-hero__decor--star" aria-hidden="true">✦</div>
-      <div class="videos-hero__decor videos-hero__decor--circle" aria-hidden="true"></div>
-      <div class="videos-hero__decor videos-hero__decor--dots" aria-hidden="true"></div>
-
-      <div class="container videos-hero__container">
-        <div class="videos-hero__text">
-          <div class="videos-hero__badge">
+    <!-- HERO SECTION (Using home hero classes) -->
+    <section class="hero videos-hero" aria-labelledby="hero-title">
+      <div class="container hero__container videos-hero__container">
+        <div class="hero__text videos-hero__text">
+          <div class="badge badge--yellow" style="display:inline-flex; gap:8px; margin-bottom:20px;">
             <span aria-hidden="true">📐</span> Math Video Lessons
           </div>
           <h1 id="hero-title" class="videos-hero__title">
@@ -64,131 +56,114 @@
           <p class="videos-hero__lead">
             Watch, learn, and master math concepts with our fun animated videos. Perfect for young learners!
           </p>
-          <div class="videos-hero__actions">
+          <div class="hero__actions videos-hero__actions">
             <a href="#library" class="btn btn--primary">▶ Start Watching</a>
-            <a href="#" class="btn btn--secondary">📚 Browse Library</a>
+            <a href="math-games.html" class="btn btn--ghost">📚 Browse Games</a>
           </div>
         </div>
-        <div class="videos-hero__visual">
-          <div class="videos-hero__screen">
-            <svg class="videos-hero__screen-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="300" fill="#fde68a" />
-              <text x="170" y="160" font-size="60">🧮✨</text>
-            </svg>
-            <div class="videos-hero__play" aria-hidden="true">▶</div>
+        <div class="hero__visual videos-hero__visual">
+          <div class="hero__media videos-hero__screen" style="background:#fde68a; border:none; border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-lg); display:flex; align-items:center; justify-content:center; padding:20px;">
+            <span style="font-size:6rem; line-height:1;">🧮✨</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- VIDEO GRID SECTION -->
-    <section id="library" class="video-library section" aria-labelledby="library-title">
+    <!-- VIDEO GRID SECTION (Using home grid classes) -->
+    <section id="library" class="section video-library" aria-labelledby="library-title">
       <div class="container">
         <div class="section-header">
           <h2 id="library-title">🎬 Featured Math Videos</h2>
           <p class="body-text">Watch, learn, and master math with our fun animations — basic math for kids!</p>
         </div>
 
-        <div class="video-grid">
+        <div class="games-grid video-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
           <!-- Video Card 1 -->
-          <article class="video-card animate-in">
-            <div class="video-card__thumb">
-              <span class="video-card__placeholder">➕</span>
-              <button class="video-card__play" aria-label="Play Addition"><span aria-hidden="true">▶</span></button>
+          <article class="game-card video-card animate-in">
+            <div class="game-card__thumb video-card__thumb" style="height:180px; display:flex; align-items:center; justify-content:center; background:var(--ml-yellow-light);">
+              <span style="font-size:4rem;">➕</span>
             </div>
-            <div class="video-card__body">
-              <h3 class="video-card__title">Addition & Subtraction Basics</h3>
-              <p class="video-card__text">Learn how to add and subtract with fun examples using fruits, toys, and
-                everyday objects.</p>
-              <div class="video-card__meta">
-                <span class="badge badge--green">Beginner</span>
-                <span class="video-card__duration"><span aria-hidden="true">⏱️</span> Coming Soon</span>
+            <div class="game-card__content video-card__body">
+              <h3 class="game-card__title video-card__title">Addition & Subtraction Basics</h3>
+              <p class="game-card__text video-card__text">Learn how to add and subtract with fun examples using fruits, toys, and everyday objects.</p>
+              <div class="game-card__meta video-card__meta" style="display:flex; gap:var(--space-3); margin-top:auto;">
+                <span class="badge badge--green" style="margin:0;">Beginner</span>
+                <span style="font-size:0.8125rem; font-weight:600; color:var(--ml-text-muted);">⏱️ Coming Soon</span>
               </div>
             </div>
           </article>
 
           <!-- Video Card 2 -->
-          <article class="video-card animate-in">
-            <div class="video-card__thumb">
-              <span class="video-card__placeholder">🔢</span>
-              <button class="video-card__play" aria-label="Play Counting"><span aria-hidden="true">▶</span></button>
+          <article class="game-card video-card animate-in">
+            <div class="game-card__thumb video-card__thumb" style="height:180px; display:flex; align-items:center; justify-content:center; background:var(--ml-blue-light);">
+              <span style="font-size:4rem;">🔢</span>
             </div>
-            <div class="video-card__body">
-              <h3 class="video-card__title">Counting 1 to 20</h3>
-              <p class="video-card__text">Fun counting to master numbers 1-20. Count along with colorful objects and
-                friendly characters.</p>
-              <div class="video-card__meta">
-                <span class="badge badge--green">Beginner</span>
-                <span class="video-card__duration"><span aria-hidden="true">⏱️</span> Coming Soon</span>
+            <div class="game-card__content video-card__body">
+              <h3 class="game-card__title video-card__title">Counting 1 to 20</h3>
+              <p class="game-card__text video-card__text">Fun counting to master numbers 1-20. Count along with colorful objects and friendly characters.</p>
+              <div class="game-card__meta video-card__meta" style="display:flex; gap:var(--space-3); margin-top:auto;">
+                <span class="badge badge--green" style="margin:0;">Beginner</span>
+                <span style="font-size:0.8125rem; font-weight:600; color:var(--ml-text-muted);">⏱️ Coming Soon</span>
               </div>
             </div>
           </article>
 
           <!-- Video Card 3 -->
-          <article class="video-card animate-in">
-            <div class="video-card__thumb">
-              <span class="video-card__placeholder">⭐</span>
-              <button class="video-card__play" aria-label="Play Shapes"><span aria-hidden="true">▶</span></button>
+          <article class="game-card video-card animate-in">
+            <div class="game-card__thumb video-card__thumb" style="height:180px; display:flex; align-items:center; justify-content:center; background:var(--ml-green-light);">
+              <span style="font-size:4rem;">⭐</span>
             </div>
-            <div class="video-card__body">
-              <h3 class="video-card__title">Learn Shapes</h3>
-              <p class="video-card__text">Explore circles, squares, triangles, and rectangles in this fun shape-hunting
-                adventure.</p>
-              <div class="video-card__meta">
-                <span class="badge badge--green">Beginner</span>
-                <span class="video-card__duration"><span aria-hidden="true">⏱️</span> Coming Soon</span>
+            <div class="game-card__content video-card__body">
+              <h3 class="game-card__title video-card__title">Learn Shapes</h3>
+              <p class="game-card__text video-card__text">Explore circles, squares, triangles, and rectangles in this fun shape-hunting adventure.</p>
+              <div class="game-card__meta video-card__meta" style="display:flex; gap:var(--space-3); margin-top:auto;">
+                <span class="badge badge--green" style="margin:0;">Beginner</span>
+                <span style="font-size:0.8125rem; font-weight:600; color:var(--ml-text-muted);">⏱️ Coming Soon</span>
               </div>
             </div>
           </article>
 
           <!-- Video Card 4 -->
-          <article class="video-card animate-in">
-            <div class="video-card__thumb">
-              <span class="video-card__placeholder">✖️</span>
-              <button class="video-card__play" aria-label="Play Multiplication"><span
-                  aria-hidden="true">▶</span></button>
+          <article class="game-card video-card animate-in">
+            <div class="game-card__thumb video-card__thumb" style="height:180px; display:flex; align-items:center; justify-content:center; background:var(--ml-orange-light);">
+              <span style="font-size:4rem;">✖️</span>
             </div>
-            <div class="video-card__body">
-              <h3 class="video-card__title">Multiplication Made Easy</h3>
-              <p class="video-card__text">Discover fun tricks to understand multiplication as repeated addition. Perfect
-                for 2nd & 3rd graders.</p>
-              <div class="video-card__meta">
-                <span class="badge badge--yellow">Intermediate</span>
-                <span class="video-card__duration"><span aria-hidden="true">⏱️</span> Coming Soon</span>
+            <div class="game-card__content video-card__body">
+              <h3 class="game-card__title video-card__title">Multiplication Made Easy</h3>
+              <p class="game-card__text video-card__text">Discover fun tricks to understand multiplication as repeated addition. Perfect for 2nd & 3rd graders.</p>
+              <div class="game-card__meta video-card__meta" style="display:flex; gap:var(--space-3); margin-top:auto;">
+                <span class="badge badge--yellow" style="margin:0;">Intermediate</span>
+                <span style="font-size:0.8125rem; font-weight:600; color:var(--ml-text-muted);">⏱️ Coming Soon</span>
               </div>
             </div>
           </article>
 
           <!-- Video Card 5 -->
-          <article class="video-card animate-in">
-            <div class="video-card__thumb">
-              <span class="video-card__placeholder">➗</span>
-              <button class="video-card__play" aria-label="Play Division"><span aria-hidden="true">▶</span></button>
+          <article class="game-card video-card animate-in">
+            <div class="game-card__thumb video-card__thumb" style="height:180px; display:flex; align-items:center; justify-content:center; background:var(--ml-purple-light);">
+              <span style="font-size:4rem;">➗</span>
             </div>
-            <div class="video-card__body">
-              <h3 class="video-card__title">Division for Beginners</h3>
-              <p class="video-card__text">Learn how to share equally and solve simple division problems using candies &
-                toys.</p>
-              <div class="video-card__meta">
-                <span class="badge badge--yellow">Intermediate</span>
-                <span class="video-card__duration"><span aria-hidden="true">⏱️</span> Coming Soon</span>
+            <div class="game-card__content video-card__body">
+              <h3 class="game-card__title video-card__title">Division for Beginners</h3>
+              <p class="game-card__text video-card__text">Learn how to share equally and solve simple division problems using candies & toys.</p>
+              <div class="game-card__meta video-card__meta" style="display:flex; gap:var(--space-3); margin-top:auto;">
+                <span class="badge badge--yellow" style="margin:0;">Intermediate</span>
+                <span style="font-size:0.8125rem; font-weight:600; color:var(--ml-text-muted);">⏱️ Coming Soon</span>
               </div>
             </div>
           </article>
 
           <!-- Video Card 6 -->
-          <article class="video-card animate-in">
-            <div class="video-card__thumb">
-              <span class="video-card__placeholder">🍕</span>
-              <button class="video-card__play" aria-label="Play Fractions"><span aria-hidden="true">▶</span></button>
+          <article class="game-card video-card animate-in">
+            <div class="game-card__thumb video-card__thumb" style="height:180px; display:flex; align-items:center; justify-content:center; background:var(--ml-yellow-light);">
+              <span style="font-size:4rem;">🍕</span>
             </div>
-            <div class="video-card__body">
-              <h3 class="video-card__title">Understanding Fractions</h3>
-              <p class="video-card__text">Pizza, chocolate bars, and watermelons explain fractions in the yummiest way
-                possible!</p>
-              <div class="video-card__meta">
-                <span class="badge badge--yellow">Intermediate</span>
-                <span class="video-card__duration"><span aria-hidden="true">⏱️</span> Coming Soon</span>
+            <div class="game-card__content video-card__body">
+              <h3 class="game-card__title video-card__title">Understanding Fractions</h3>
+              <p class="game-card__text video-card__text">Pizza, chocolate bars, and watermelons explain fractions in the yummiest way possible!</p>
+              <div class="game-card__meta video-card__meta" style="display:flex; gap:var(--space-3); margin-top:auto;">
+                <span class="badge badge--yellow" style="margin:0;">Intermediate</span>
+                <span style="font-size:0.8125rem; font-weight:600; color:var(--ml-text-muted);">⏱️ Coming Soon</span>
               </div>
             </div>
           </article>
@@ -196,25 +171,22 @@
       </div>
     </section>
 
-    <!-- FEATURED VIDEO SECTION (BONUS) -->
-    <section class="featured-video section" aria-labelledby="featured-title">
+    <!-- FEATURED VIDEO SECTION -->
+    <section class="section featured-video" aria-labelledby="featured-title">
       <div class="container">
-        <div class="featured-video__card">
-          <div class="featured-video__content">
-            <span class="badge badge--yellow featured-video__badge">⭐ Bonus Lesson</span>
-            <h2 id="featured-title" class="featured-video__title">
-              Addition with <span class="highlight">Regrouping</span>
-            </h2>
-            <p class="featured-video__text">
-              Learn how to add two-digit numbers with carrying/regrouping. Step-by-step explanation perfect for 2nd
-              grade math — coming soon!
+        <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:var(--space-10); background:var(--ml-surface); border-radius:var(--radius-xl); border:1px solid var(--ml-navy); box-shadow:var(--shadow-lg); overflow:hidden;">
+          <div style="padding:var(--space-10); display:flex; flex-direction:column; justify-content:center;">
+            <span class="badge badge--yellow" style="margin-bottom:var(--space-4);">⭐ Bonus Lesson</span>
+            <h2>Addition with <span class="highlight">Regrouping</span></h2>
+            <p style="max-width:480px; color:var(--ml-text-secondary); font-size:clamp(1rem, 2vw, 1.125rem); line-height:1.7; margin-bottom:var(--space-8);">
+              Learn how to add two-digit numbers with carrying/regrouping. Step-by-step explanation perfect for 2nd grade math — coming soon!
             </p>
             <button class="btn btn--blue" style="width: fit-content;">Notify me →</button>
           </div>
-          <div class="featured-video__screen">
-            <div class="featured-video__screen-inner">
-              <div class="featured-video__screen-icon">📝</div>
-              <div class="featured-video__screen-text">Video Coming Soon</div>
+          <div style="background:linear-gradient(135deg, #fef9c3, #fde68a); padding:var(--space-10); display:flex; align-items:center; justify-content:center; min-height:400px;">
+            <div style="width:220px; height:220px; background:var(--ml-surface); border-radius:var(--radius-lg); box-shadow:0 20px 40px rgba(0,0,0,0.12); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:var(--space-5); border:2px dashed var(--ml-navy);">
+              <span style="font-size:3rem;">📝</span>
+              <span style="font-size:0.9375rem; font-weight:700; color:var(--ml-text-muted);">Video Coming Soon</span>
             </div>
           </div>
         </div>
@@ -222,12 +194,11 @@
     </section>
 
     <!-- NEWSLETTER -->
-    <section class="newsletter section" aria-labelledby="newsletter-title">
+    <section class="section newsletter" aria-labelledby="newsletter-title">
       <div class="container newsletter__container">
         <div class="newsletter__icon" aria-hidden="true">📧</div>
         <h2 id="newsletter-title" class="newsletter__title">New Video Every Week!</h2>
-        <p class="body-text newsletter__text">Get notified when we release new math video lessons — no songs, just real
-          math 🧠.</p>
+        <p class="body-text newsletter__text">Get notified when we release new math video lessons — no songs, just real math 🧠.</p>
         <form class="newsletter__form" aria-label="Newsletter signup">
           <label for="email" class="visually-hidden">Email address</label>
           <input type="email" id="email" class="newsletter__input" placeholder="Enter your email" required>
@@ -239,23 +210,36 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="videos-footer" role="contentinfo">
-    <div class="container videos-footer__inner">
-      <a href="#" class="videos-footer__logo">
-        <span aria-hidden="true">🧸</span> Mathlings
+  <footer class="footer videos-footer" role="contentinfo">
+    <div class="container footer__inner videos-footer__inner">
+      <a href="index.html" class="footer__logo videos-footer__logo">
+        <img src="assets/images/mathlings-icon.webp" alt="Mathlings" style="height:32px; width:auto;">
+        <span>Mathlings</span>
       </a>
-      <ul class="videos-footer__links" role="list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Math Games</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Stories</a></li>
+      <ul class="footer__links videos-footer__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="math-games.html">Math Games</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="stories.html">Stories</a></li>
         <li><a href="#">Privacy</a></li>
         <li><a href="#">Terms</a></li>
       </ul>
-      <p class="videos-footer__copy">© 2025 Mathlings — Making math fun for every child.</p>
+      <p class="footer__copy videos-footer__copy">© 2025 Mathlings — Making math fun for every child.</p>
     </div>
   </footer>
 
-</body>
+  <!-- Mobile Menu Script -->
+  <script>
+    const toggle = document.querySelector(".navbar__toggle");
+    const menu = document.querySelector(".navbar__links");
 
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen);
+      });
+    }
+  </script>
+
+</body>
 </html>
